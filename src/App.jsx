@@ -1,8 +1,8 @@
-
+import NavigationBar from "./components/nav/NavigationBar"
 function App() {
   return (
     <>
-    <h1>Hello World</h1>
+    <NavigationBar />
     </>
   )
 }
