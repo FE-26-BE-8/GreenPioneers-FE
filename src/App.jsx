@@ -1,8 +1,9 @@
+import Home from "./components/pages/home/Home"
 
 function App() {
   return (
     <>
-    <h1>Hello World</h1>
+   <Home />
     </>
   )
 }
