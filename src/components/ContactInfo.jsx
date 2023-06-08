@@ -1,7 +1,14 @@
-import { connect } from 'react-redux';
-import "../css/Contact.css";
+import React from 'react';
+import "../components/Contact.css";
 
-const ContactInfo = ({ contactInfo }) => {
+const contactInfo = {
+  address: "Jalan Tanjung Priuk, no 801, Jakarta Selatan",
+  contactPerson: "Khatirul Ihsan",
+  phoneNumber: "+62-9384-2341",
+  officeHours: "Senin-Kamis 08.00-17.00",
+};
+
+const ContactInfo = () => {
   const { address, contactPerson, phoneNumber, officeHours } = contactInfo;
 
   return (
@@ -20,10 +27,4 @@ const ContactInfo = ({ contactInfo }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    contactInfo: state,
-  };
-};
-
-export default connect(mapStateToProps)(ContactInfo);
+export default ContactInfo;
