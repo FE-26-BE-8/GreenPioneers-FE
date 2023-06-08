@@ -1,10 +1,17 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './redux';
+import Register from './components/Register';
 
-function App() {
+const store = createStore(rootReducer);
+
+const App = () => {
   return (
-    <>
-    <h1>Hello World</h1>
-    </>
-  )
-}
+    <Provider store={store}>
+      <Register />
+    </Provider>
+  );
+};
 
-export default App
+export default App;
