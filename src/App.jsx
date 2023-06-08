@@ -1,8 +1,8 @@
-
+import Tips from "./components/pages/tips/Tips"
 function App() {
   return (
     <>
-    <h1>Hello World</h1>
+  <Tips/>
     </>
   )
 }
