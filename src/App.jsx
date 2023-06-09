@@ -1,11 +1,14 @@
-import ContactForm from "./components/ContactForm"
+import Footer from "./components/footer/Footer"
+import NavigationBar from "./components/nav/NavigationBar"
+import Home from "./components/pages/home/Home"
 
 function App() {
   return (
-    <>
-    {/* <h1>Hello World</h1> */}
-    <ContactForm /> 
-    </>
+  <>
+  <NavigationBar />
+  <Home />
+  <Footer />
+</>
   )
 }
 
