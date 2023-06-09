@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "../css/Login.css";
 import gambar from "../assets/gambar.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const apiUrl = "https://tame-erin-scarab-boot.cyclic.app/api/";
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
 
     // Validasi input kosong
@@ -20,27 +18,6 @@ const Login = () => {
     if (password.trim() === "") {
       alert("Password harus diisi!");
       return;
-    }
-
-    try {
-      const response = await axios.post(apiUrl + "login", {
-        email: email,
-        password: password,
-      });
-
-      // Berhasil masuk, dapatkan header Authorization
-      const authorizationHeader = response.headers['authorization'];
-      // Lakukan apa yang perlu Anda lakukan dengan header Authorization
-      console.log(authorizationHeader);
-
-      // Reset nilai email dan password setelah berhasil masuk
-      setEmail("");
-      setPassword("");
-    } catch (error) {
-      // Tangani kesalahan jaringan atau kesalahan lainnya
-      console.error(error);
-      // Tampilkan pesan kesalahan kepada pengguna
-      alert("Gagal masuk. Silakan coba lagi.");
     }
   };
 
@@ -69,7 +46,7 @@ const Login = () => {
               type="password"
               id="password"
               placeholder="Password"
-              value={password}
+              value={password}  
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="submit">Login</button>
