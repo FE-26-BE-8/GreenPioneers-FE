@@ -1,5 +1,10 @@
+import Footer from "../../footer/Footer";
+import NavigationBar from "../../nav/NavigationBar";
 import "./Home.css";
+
 import React, { useState } from 'react';
+
+
 function Home() {
   const [programEvents, setProgramEvents] = useState([
     {
@@ -93,8 +98,8 @@ function Home() {
 
 
   return (
-
     <>
+     <NavigationBar />
     <div>
       {/* ---------------------PROGRAM EVENTS-------------------- */}
       <div className="program-events-container">
@@ -169,7 +174,9 @@ function Home() {
     </div>
 
       </div>
+      <Footer />
     </>
+
   );
 }
 
