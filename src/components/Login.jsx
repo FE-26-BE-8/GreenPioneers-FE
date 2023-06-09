@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../css/Login.css";
-import gambar from "../assets/img/gambar.png";
+import gambar from "../assets/gambar.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
