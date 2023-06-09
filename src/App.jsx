@@ -1,12 +1,15 @@
 import Footer from "./components/footer/Footer"
 import NavigationBar from "./components/nav/NavigationBar"
+import Home from "./components/pages/home/Home"
+
 function App() {
   return (
     <>
-    <NavigationBar />
-    <Footer />
+  <NavigationBar />
+  <Home />
+  <Footer />
 
-    </>
+  </>
   )
 }
 
