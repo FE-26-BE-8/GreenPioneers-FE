@@ -50,12 +50,13 @@
 
 .wrapper-navlist .nav-list{
     color: #FFFF;
-    
+    text-decoration: none;
     font-weight: 500;
 }
 .wrapper-navlist .nav-list:hover{
     color: #3C6255;
 }
+
 
 
 .btn-nav .btn-login {
