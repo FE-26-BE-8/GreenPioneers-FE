@@ -1,5 +1,4 @@
 // import ContactForm from "./components/ContactForm"
-import ContactForm from "../pages/contact/ContactForm";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 function Footer() {
