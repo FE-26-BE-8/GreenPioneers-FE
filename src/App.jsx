@@ -1,3 +1,4 @@
+import News from "./components/pages/news/News"
 import Tips from "./components/pages/tips/Tips";
 import Home from "./components/pages/home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -15,6 +16,10 @@ function App() {
     {
       path: "/list-tips",
       element: <Tips />,
+    },
+    {
+      path: "/list-news",
+      element: <News />,
     }
   ]);
   return (
