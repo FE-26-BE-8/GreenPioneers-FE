@@ -1,3 +1,5 @@
+import Footer from "../../footer/Footer";
+import NavigationBar from "../../nav/NavigationBar";
 import "./Tips.css";
 import React, { useState } from 'react';
 
@@ -54,6 +56,7 @@ function Tips() {
 
   return (
     <>
+    <NavigationBar />
        {/* //---------------------Tips-------------------------- */}
  
        <div className="tips-container container">
@@ -106,7 +109,7 @@ function Tips() {
        </div>
      </div>
      </div>
-       
+      <Footer />
      </>
    );
 }
