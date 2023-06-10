@@ -1,3 +1,4 @@
+import Tips from "./components/pages/tips/Tips"
 import Home from "./components/pages/home/Home"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import ContactForm from "./components/pages/contact/ContactForm"
@@ -11,10 +12,12 @@ function App() {
       path: "/kontak", 
       element: <ContactForm />
     }
- 
   ])
   return (
+    <>
+   
   <RouterProvider router = {router}/>
+  </>
   )
 }
 
