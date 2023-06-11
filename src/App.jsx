@@ -1,9 +1,10 @@
-import Footer from "./components/footer/Footer"
+import DetailNews from "./components/DetailNews"
 
 function App() {
+
   return (
     <>
-    <Footer />
+      <DetailNews/>
     </>
   )
 }
