@@ -1,0 +1,33 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 35px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .form-divider {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button-container button {
+    width: 100%;
+  }
