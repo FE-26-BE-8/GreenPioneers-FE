@@ -1,9 +1,8 @@
-import Footer from "./components/footer/Footer"
 
 function App() {
   return (
     <>
-    <Footer />
+  <h1>Hello Word</h1>
     </>
   )
 }
