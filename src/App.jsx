@@ -1,9 +1,10 @@
-import Footer from "./components/footer/Footer"
+import DetailTips from "./components/pages/tips/DetailTips"
 
 function App() {
+
   return (
     <>
-    <Footer />
+      <DetailTips/>
     </>
   )
 }
