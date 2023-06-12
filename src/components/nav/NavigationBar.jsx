@@ -27,10 +27,10 @@ function NavigationBar() {
               navbarScroll
             >
          
-              <Link to ="/" className="m-auto nav-list">Home</Link>
-              <Link to ="/list-news" className="m-auto nav-list">News</Link>
-              <Link to ="/list-tips" className="m-auto nav-list">Tips</Link>
-              <Nav.Link href="#action1"  className="m-auto nav-list">Program</Nav.Link>
+              <Link to ="/" className="m-auto nav-list active">Home</Link>
+              <Link to ="/list-news" className="m-auto nav-list active">News</Link>
+              <Link to ="/list-tips" className="m-auto nav-list active">Tips</Link>
+              <Nav.Link href="#action1"  className="m-auto nav-list active">Program</Nav.Link>
             </Nav>
             <div className="d-flex gap-2 btn-nav">
               <Button variant="outline-success" className="w-100 btn-login">Login</Button>
