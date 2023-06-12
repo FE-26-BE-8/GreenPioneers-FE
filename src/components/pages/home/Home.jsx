@@ -1,6 +1,8 @@
-import "./Home.css";
+import Footer from "../../footer/Footer";
+import NavigationBar from "../../nav/NavigationBar";
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import "./Home.css";
 function Home() {
   const [programEvents, setProgramEvents] = useState([
     {
@@ -103,7 +105,8 @@ function Home() {
 
   return (
     <>
-     <Carousel className="home-carousel">
+    <NavigationBar />
+    <Carousel className="home-carousel">
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -144,26 +147,23 @@ function Home() {
           </div>
         </Carousel.Item>
       </Carousel>
-      <div>
-        {/* ---------------------PROGRAM EVENTS-------------------- */}
-        <div className="program-events-container">
-          <h1 className="heading">Program Events</h1>
-          <div className="box-container-1">
-            {programEvents.map((event) => (
-              <div className="program-events-card" key={event.id}>
-                <img src={event.imageSrc} alt={event.title} />
-                <div className="title-events">
-                  <h3>{event.title}</h3>
-                </div>
-                <div className="detail-events">
-                  <p>{event.description}</p>
-                </div>
-                <button className="btn-event">Selengkapnya</button>
-              </div>
-            ))}
+      {/* ---------------------PROGRAM EVENTS-------------------- */}
+      <div className="program-events-container">
+      <h1 className="heading">Program Events</h1>
+      <div className="box-container-1">
+        {programEvents.map((event) => (
+          <div className="program-events-card" key={event.id}>
+            <img src={event.imageSrc} alt={event.title} />
+            <div className="title-events">
+              <h3>{event.title}</h3>
+            </div>
+            <div className="detail-events">
+              <p>{event.description}</p>
+            </div>
+            <button className="btn-event">Selengkapnya</button>
           </div>
-        </div>
-
+        ))}
+      </div>
         {/* //---------------------NEWS-------------------------- */}
 
         <div className="news-container container">
@@ -217,6 +217,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
