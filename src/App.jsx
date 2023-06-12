@@ -1,8 +1,10 @@
+import Profile from "./components/Profile"
+import "./css/Profile.css"
 
 function App() {
   return (
     <>
-  <h1>Hello Word</h1>
+    <Profile />
     </>
   )
 }
