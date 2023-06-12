@@ -71,7 +71,6 @@ function Programs() {
                 </p>
                 <div className="button-container">
                   <button className="follow-button">Ikuti Program</button>
-                  <button className="program-button">Selengkapnya</button>
                 </div>
               </div>
             </div>
