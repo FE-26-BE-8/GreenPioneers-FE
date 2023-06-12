@@ -165,6 +165,7 @@ function Home() {
           </div>
         ))}
       </div>
+      </div>
         {/* //---------------------NEWS-------------------------- */}
 
         <div className="news-container container">
@@ -217,7 +218,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+  
       <Footer />
     </>
   );
