@@ -28,7 +28,7 @@ function NavigationBar() {
             >
          
               <Link to ="/" className="m-auto nav-list">Home</Link>
-              <Nav.Link href="#action1" className="m-auto nav-list">News</Nav.Link>
+              <Link to ="/list-news" className="m-auto nav-list">News</Link>
               <Link to ="/list-tips" className="m-auto nav-list">Tips</Link>
               <Nav.Link href="#action1"  className="m-auto nav-list">Program</Nav.Link>
             </Nav>
