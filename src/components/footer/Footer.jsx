@@ -1,3 +1,4 @@
+// import ContactForm from "./components/ContactForm"
 import { Link } from "react-router-dom";
 import "./Footer.css";
 function Footer() {
@@ -34,7 +35,7 @@ function Footer() {
           <a href="#">Kebijakan Privasi</a>
         </li>
         <li>
-          <Link to ="/kontak">Kontak Kami</Link>
+          <Link to="/kontak">Kontak Kami</Link>
         </li>
         </ul>
       </div>

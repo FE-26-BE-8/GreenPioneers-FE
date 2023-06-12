@@ -1,16 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap");
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* --------------Carousel News CSS ------------*/
+.home-carousel img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.wrapper-title-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.title-carousel {
+  color: white;
+  text-align: center;
+}
+
+.title-carousel h3 {
+  font-size: 2.5rem;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2.5px;
+}
+
+.title-carousel p {
+  font-size: 1.3rem;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+  /* line-height: 25px; */
+  letter-spacing: 2.5px;
 }
 
 /* ---------------NEWS CSS -----------------*/
 
-body .news-container {
+.news-container {
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(0,0,0,.4);
     padding-top: 50px;
@@ -23,54 +61,51 @@ body .news-container {
 }
 
 .heading {
-    margin-bottom: 25px;
-    color: #00253A;
-    
-    font-size: 50px;
-    font-weight: 700;
+  margin-bottom: 25px;
+  color: #00253a;
 
+  font-size: 50px;
+  font-weight: 700;
 }
 
-
 .news-container .img-news {
-height: 100%;
-border-radius: 15px;
-margin-top: 25px;
-cursor: pointer;
+  height: 100%;
+  border-radius: 15px;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 .news-container .img-news:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .news-container .news-card {
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.4);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.card-text{
-    font-size: 14px;
-    text-align:justify;
-    margin-right: 15px;
+.card-text {
+  font-size: 14px;
+  text-align: justify;
+  margin-right: 15px;
 }
 
-
-.btn-news{
-    padding: 5px 30px;
-    background-color: #04991C;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    color: #FFFF;
-    border-bottom: 3px solid #3C6255;
-    color: #FFFF;
-    font-size: 12px;
-    font-weight: 400;
+.btn-news {
+  padding: 5px 30px;
+  background-color: #04991c;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: #ffff;
+  border-bottom: 3px solid #3c6255;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: 400;
 }
 
-.btn-news:hover{
-    background-color: #41644A;
-    border-bottom: 3px solid #04991C
+.btn-news:hover {
+  background-color: #41644a;
+  border-bottom: 3px solid #04991c;
 }
 
 .trending-topics {
@@ -114,28 +149,40 @@ cursor: pointer;
   text-decoration: none;
 }
 
-@media only screen and (max-width:676px){
-    .news-container {
+@media only screen and (max-width: 676px) {
+  .title-carousel{
+    width: 50%;
+  }
+
+  .title-carousel h3{
+    font-size: 2rem;
+  }
+
+  .title-carousel p{
+    font-size: 1rem;
+  }
+
+  .news-container {
     padding: 20px;
     display: block;
     justify-content: space-around;
 
-    .heading{
-       text-align: center;
+    .heading {
+      text-align: center;
     }
     .news-card {
-       width: 70%;
-       margin-left: 80px;
+      width: 70%;
+      margin-left: 80px;
     }
 
-    .trending-topics h2{
-        text-align: center;
-        margin-bottom: 25px;
+    .trending-topics h2 {
+      text-align: center;
+      margin-bottom: 25px;
     }
-    
+
     .trend-container {
-        width: 80%;
-        margin-left: 55px;
+      width: 80%;
+      margin-left: 55px;
     }
-}
+  }
 }
