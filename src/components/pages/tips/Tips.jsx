@@ -1,8 +1,9 @@
 import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
 import "./Tips.css";
+import React, { useState } from 'react';
+import Carousel from "react-bootstrap/Carousel";
 import React, { useState } from "react";
-
 function Tips() {
   const [tipsData, setTipsData] = useState([
     {
@@ -61,60 +62,102 @@ function Tips() {
   return (
     <>
       <NavigationBar />
-      {/* //---------------------Tips-------------------------- */}
-
-      <div className="tips-container container">
-        <div className="col-md-7">
-          <h1 className="heading">Tips</h1>
-          {tipsData.map((tips) => (
-            <div className="card mb-3 p-4 tips-card" key={tips.id}>
-              <div className="row g-0">
-                <div className="col-md-6">
-                  <h5 className="card-title">{tips.title}</h5>
-                  <p className="card-text">{tips.description}</p>
-                  <div className="text-center btn-article">
-                    <button className="btn-tips">Baca Selengkapnya</button>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="card-body">
-                    <img
-                      src={tips.imageSrc}
-                      alt="Kebakaran Hutan"
-                      className="img-fluid img-tips"
-                    />
-                  </div>
-                </div>
-              </div>
+      {/* //---------------------CarouselTips-------------------------- */}
+      <Carousel className="tips-carousel">
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Tips-Carosel-1.jpg"
+            alt="First slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Menghiasi Tanah dengan Harapan</h3>
+              <p>Memulai Perjalanan Baru dengan Penanaman Hutan Kembali</p>
             </div>
-          ))}
-        </div>
-        {/* //---------------------Trending Topics-------------------------- */}
-        <div className="col-md-4 mt-lg-5 trend-container">
-          <div className="trending-topics">
-            <h2>Trending Topics</h2>
-            <ul>
-              {topics.map((topic, index) => (
-                <li key={index}>
-                  <div className="topic">
-                    <img src={topic.image} alt="Trending Topic" />
-                    <div>
-                      <a href="#">{topic.title}</a>
-                      <p className="card-text">
-                        <small className="text-body-secondary">
-                          {topic.updatedAt}
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Tips-Carosel-2.jpg"
+            alt="Second slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Inovasi dari Limbah</h3>
+              <p>Membangun Masa Depan yang Berkelanjutan</p>
+            </div>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Tips-Carosel-3.jpg"
+            alt="Third slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Jauh dari Plastik, Dekat dengan Bumi</h3>
+              <p>Mencari Solusi Kreatif untuk Mengurangi Penggunaan Plastik</p>
+            </div>
+          </div>
+        </Carousel.Item>
+      </Carousel>
+       {/* //---------------------Tips-------------------------- */}
+ 
+       <div className="tips-container container">
+       <div className="col-md-7">
+         <h1 className="heading">Tips</h1>
+         {tipsData.map((tips) => (
+           <div className="card mb-3 p-4 tips-card" key={tips.id}>
+             <div className="row g-0">
+               <div className="col-md-6">
+                 <h5 className="card-title">{tips.title}</h5>
+                 <p className="card-text">{tips.description}</p>
+                 <div className="text-center btn-article">
+                   <button className="btn-tips">Baca Selengkapnya</button>
+                 </div>
+               </div>
+               <div className="col-md-6">
+                 <div className="card-body">
+                   <img
+                     src={tips.imageSrc}
+                     alt="Kebakaran Hutan"
+                     className="img-fluid img-tips"
+                   />
+                 </div>
+               </div>
+             </div>
+           </div>
+         ))}
+       </div>
+       {/* //---------------------Trending Topics-------------------------- */}
+       <div className="col-md-4 mt-lg-5 trend-container">
+       <div className="trending-topics">
+         <h2>Trending Topics</h2>
+         <ul>
+           {topics.map((topic, index) => (
+             <li key={index}>
+               <div className="topic">
+                 <img src={topic.image} alt="Trending Topic" />
+                 <div>
+                   <a href="#">{topic.title}</a>
+                   <p className="card-text">
+                     <small className="text-body-secondary">
+                       {topic.updatedAt}
+                     </small>
+                   </p>
+                 </div>
+               </div>
+             </li>
+           ))}
+         </ul>
+       </div>
+     </div>
+     </div>
+     <Footer />
+     </>
+   );
 }
 export default Tips;
