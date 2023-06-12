@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "../css/Login.css";
 import gambar from "../assets/gambar.png";
+import UseApiCall from "../../src/helper/UseApiCall";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const {data, fetchData, error} = UseApiCall();
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     // Validasi input kosong
@@ -19,7 +21,19 @@ const Login = () => {
       alert("Password harus diisi!");
       return;
     }
+
+    const userInput = {
+      email,
+      password,
+    }
+    const data = await fetchData("https://pear-vast-bream.cyclic.app/api/login", "post", userInput)
+    if (data.status === 200) {
+      alert("Berhasil Login")
+      console.log(data.headers['authorization'])
+      localStorage.setItem("Authorization",data.headers['authorization'])
+    }
   };
+
 
   return (
     <div className="login-body">

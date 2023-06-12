@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "../css/Register.css";
 import gambar from "../assets/img/gambar.png";
+import UseApiCall from "../../src/helper/UseApiCall";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
+  const {data, fetchData, error} = UseApiCall();
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     // Validasi input kosong
@@ -32,8 +34,23 @@ const Register = () => {
       return;
     }
 
-    alert("Sign up berhasil!");
-    window.location.href = "article.html";
+    const userInput = {
+      nama : username,
+      email,
+      password,
+      confPassword : confirmpassword,
+    }
+    console.log(userInput)
+    // alert("Sign up berhasil!");
+    // window.location.href = "article.html";
+
+    const data = await fetchData("https://pear-vast-bream.cyclic.app/api/register", "post", userInput)
+    if (data.status === 201) {
+      alert("Berhasil Register")
+    } else if (error){
+      alert("Gagal Register!")
+    } 
+    console.log(data)
   };
 
   return (
