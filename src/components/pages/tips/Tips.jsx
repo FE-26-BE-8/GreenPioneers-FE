@@ -64,8 +64,8 @@ function Tips() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Menghiasi Tanah dengan Harapan</h3>
+              <p>Memulai Perjalanan Baru dengan Penanaman Hutan Kembali</p>
             </div>
           </div>
         </Carousel.Item>
@@ -77,8 +77,8 @@ function Tips() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>Second slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Inovasi dari Limbah</h3>
+              <p>Membangun Masa Depan yang Berkelanjutan</p>
             </div>
           </div>
         </Carousel.Item>
@@ -90,8 +90,8 @@ function Tips() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>Third slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Jauh dari Plastik, Dekat dengan Bumi</h3>
+              <p>Mencari Solusi Kreatif untuk Mengurangi Penggunaan Plastik</p>
             </div>
           </div>
         </Carousel.Item>
