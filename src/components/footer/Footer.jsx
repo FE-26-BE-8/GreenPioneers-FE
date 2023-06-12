@@ -34,7 +34,7 @@ function Footer() {
           <a href="#">Kebijakan Privasi</a>
         </li>
         <li>
-          <Link to ="/kontak">Hubungi Kami</Link>
+          <Link to ="/kontak">Kontak Kami</Link>
         </li>
         </ul>
       </div>
