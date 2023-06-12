@@ -1,6 +1,7 @@
 import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
 import React, { useState } from 'react';
+import Carousel from "react-bootstrap/Carousel";
 import "./News.css";
 function News() {
   const [newsData, setNewsData] = useState([
@@ -154,7 +155,7 @@ function News() {
    </div>
  </div>
  </div>
-   
+   <Footer />
  </>
 );
 }
