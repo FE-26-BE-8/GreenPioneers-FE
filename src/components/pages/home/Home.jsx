@@ -98,7 +98,7 @@ function Home() {
 
     <>
     <NavigationBar />
-    <div>
+    
       {/* ---------------------PROGRAM EVENTS-------------------- */}
       <div className="program-events-container">
       <h1 className="heading">Program Events</h1>
@@ -170,8 +170,6 @@ function Home() {
       </div>
     </div>
     </div>
-
-      </div>
       <Footer />
     </>
   );
