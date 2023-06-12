@@ -154,7 +154,7 @@ function Home() {
       <div className="box-container-1">
         {programEvents.map((event) => (
           <div className="program-events-card" key={event.id}>
-            <img src={event.imageSrc} alt={event.title} />
+          <img src={event.imageSrc} alt={event.title} />
             <div className="title-events">
               <h3>{event.title}</h3>
             </div>
