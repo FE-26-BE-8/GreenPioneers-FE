@@ -112,8 +112,8 @@ function Home() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Harmoni Tersembunyi</h3>
+              <p>Mengungkap Keindahan dan Keajaiban Lingkungan Alam</p>
             </div>
           </div>
         </Carousel.Item>
@@ -125,8 +125,8 @@ function Home() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>Second slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Sentuhan Angin yang Menyegarkan</h3>
+              <p>Rintihan Kebebasan di Tengah Hutan</p>
             </div>
           </div>
         </Carousel.Item>
@@ -138,8 +138,8 @@ function Home() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>Third slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Hijau Mengheningkan Cipta</h3>
+              <p>Mengagumi Keindahan Melodi Hidup di Bawah Daun-Daun</p>
             </div>
           </div>
         </Carousel.Item>

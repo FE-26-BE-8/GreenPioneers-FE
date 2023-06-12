@@ -8,14 +8,14 @@
     text-decoration: none;
 }
 
-/* ---------------CAROUSEL CSS -----------------*/
+/* ---------------Home CAROUSEL CSS -----------------*/
 
-.home-carousel img{
+.home-carousel img {
     height: 90vh;
     object-fit: cover;
-}
-
-.wrapper-title-carousel {
+  }
+  
+  .wrapper-title-carousel {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +26,25 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .4);
-}
-
-.title-carousel{
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .title-carousel {
     color: white;
     text-align: center;
-}
-
+  }
+  
+  .title-carousel h3 {
+    font-size: 2.5rem;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2.5px;
+  }
+  
+  .title-carousel p {
+    font-size: 1.3rem;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2.5px;
+  }
 
 /* ---------------PROGRAM EVENTS CSS -----------------*/
 
@@ -163,7 +174,6 @@ cursor: pointer;
     margin-right: 15px;
 }
 
-
 .btn-news{
     padding: 5px 30px;
     background-color: #04991C;
@@ -224,6 +234,23 @@ cursor: pointer;
 }
 
 @media only screen and (max-width:676px){
+    .title-carousel{
+        width: 80%;
+      }
+    
+      .title-carousel h3{
+        font-size: 30px;
+        text-align: center;
+      }
+    
+      .title-carousel p{
+        font-size: 1rem;
+      }
+
+    .program-events-container {
+       padding: 150px;
+    }
+
     .news-container {
     padding: 20px;
     display: block;
