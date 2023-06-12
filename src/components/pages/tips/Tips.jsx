@@ -1,6 +1,6 @@
 import "./Tips.css";
 import React, { useState } from 'react';
-
+import Carousel from "react-bootstrap/Carousel";
 function Tips() {
   const [tipsData, setTipsData ]  = useState([
     {
@@ -54,6 +54,48 @@ function Tips() {
 
   return (
     <>
+      {/* //---------------------CarouselTips-------------------------- */}
+      <Carousel className="home-carousel">
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Tips-Carosel-1.jpg"
+            alt="First slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Tips-Carosel-2.jpg"
+            alt="Second slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Second slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Tips-Carosel-3.jpg"
+            alt="Third slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Third slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+        </Carousel.Item>
+      </Carousel>
        {/* //---------------------Tips-------------------------- */}
  
        <div className="tips-container container">
