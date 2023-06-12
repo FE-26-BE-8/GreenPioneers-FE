@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 /* --------------Carousel Tips CSS ------------*/
-.home-carousel img {
+.tips-carousel img {
   height: 90vh;
   object-fit: cover;
 }

@@ -55,7 +55,7 @@ function Tips() {
   return (
     <>
       {/* //---------------------CarouselTips-------------------------- */}
-      <Carousel className="home-carousel">
+      <Carousel className="tips-carousel">
         <Carousel.Item>
           <img
             className="d-block w-100"
