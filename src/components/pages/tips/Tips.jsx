@@ -1,9 +1,9 @@
 import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
-import "./Tips.css";
 import React, { useState } from 'react';
 import Carousel from "react-bootstrap/Carousel";
-import React, { useState } from "react";
+import "./Tips.css";
+
 function Tips() {
   const [tipsData, setTipsData] = useState([
     {
