@@ -1,3 +1,4 @@
+import Login from "./components/Login"
 import Register from './components/Register';
 import News from "./components/pages/news/News"
 import Tips from "./components/pages/tips/Tips";
@@ -26,6 +27,10 @@ function App() {
     {
       path: "/register",
       element: <Register />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
     }
   ]);
   return (
