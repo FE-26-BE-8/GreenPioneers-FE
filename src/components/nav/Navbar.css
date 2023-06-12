@@ -7,13 +7,11 @@
 
 .container-nav {
     display: flex;
-    position: relative;
     width: 100%;
+    justify-content: center;
     background-color: #C1D0B5;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.35);
 }
-
-
 
 .nav-logo {
     display: flex;
@@ -52,12 +50,18 @@
     color: #FFFF;
     text-decoration: none;
     font-weight: 500;
+    padding: 20px;
 }
 .wrapper-navlist .nav-list:hover{
     color: #3C6255;
 }
 
 
+@media only screen and (max-width:676px) {
+    .wrapper-navlist .nav-list{
+    text-align: center;
+    }
+}
 
 .btn-nav .btn-login {
     padding: 10px 10px;
@@ -86,4 +90,3 @@
 .btn-nav .btn-register:hover {
     background-color: #61876E;
 }
-

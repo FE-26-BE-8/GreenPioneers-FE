@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap');
 
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-
-/* --------------Carousel News CSS ------------*/
-.home-carousel img {
+/* --------------Carousel Tips CSS ------------*/
+.tips-carousel img {
   height: 90vh;
   object-fit: cover;
 }
@@ -46,9 +45,10 @@
   letter-spacing: 2.5px;
 }
 
-/* ---------------NEWS CSS -----------------*/
 
-.news-container {
+/* ---------------Tips CSS -----------------*/
+
+body .tips-container {
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(0,0,0,.4);
     padding-top: 50px;
@@ -61,51 +61,53 @@
 }
 
 .heading {
-  margin-bottom: 25px;
-  color: #00253a;
+    margin-bottom: 25px;
+    color: #00253A;
+    font-size: 50px;
+    font-weight: 700;
 
-  font-size: 50px;
-  font-weight: 700;
 }
 
-.news-container .img-news {
-  height: 100%;
-  border-radius: 15px;
-  margin-top: 25px;
-  cursor: pointer;
+
+.tips-container .img-tips {
+height: 100%;
+border-radius: 15px;
+margin-top: 25px;
+cursor: pointer;
 }
 
-.news-container .img-news:hover {
-  opacity: 0.7;
+.tips-container .img-tips:hover {
+    opacity: 0.7;
 }
 
-.news-container .news-card {
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+.tips-container .tips-card {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.4);
 }
 
-.card-text {
-  font-size: 14px;
-  text-align: justify;
-  margin-right: 15px;
+.card-text{
+    font-size: 14px;
+    text-align:justify;
+    margin-right: 15px;
 }
 
-.btn-news {
-  padding: 5px 30px;
-  background-color: #04991c;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-  color: #ffff;
-  border-bottom: 3px solid #3c6255;
-  color: #ffff;
-  font-size: 12px;
-  font-weight: 400;
+
+.btn-tips{
+    padding: 5px 30px;
+    background-color: #04991C;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    color: #FFFF;
+    border-bottom: 3px solid #3C6255;
+    color: #FFFF;
+    font-size: 12px;
+    font-weight: 400;
 }
 
-.btn-news:hover {
-  background-color: #41644a;
-  border-bottom: 3px solid #04991c;
+.btn-tips:hover{
+    background-color: #41644A;
+    border-bottom: 3px solid #04991C
 }
 
 .trending-topics {
@@ -149,7 +151,7 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 676px) {
+@media only screen and (max-width:676px){
   .title-carousel{
     width: 50%;
   }
@@ -162,27 +164,28 @@
     font-size: 1rem;
   }
 
-  .news-container {
+
+    .tips-container {
     padding: 20px;
     display: block;
     justify-content: space-around;
 
-    .heading {
-      text-align: center;
+    .heading{
+       text-align: center;
     }
-    .news-card {
-      width: 70%;
-      margin-left: 80px;
-    }
-
-    .trending-topics h2 {
-      text-align: center;
-      margin-bottom: 25px;
+    .tips-card {
+       width: 70%;
+       margin-left: 80px;
     }
 
+    .trending-topics h2{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
     .trend-container {
-      width: 80%;
-      margin-left: 55px;
+        width: 80%;
+        margin-left: 55px;
     }
-  }
+}
 }
