@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 function Footer() {
   return (
@@ -33,7 +34,7 @@ function Footer() {
           <a href="#">Kebijakan Privasi</a>
         </li>
         <li>
-        <a href="#">Hubungi Kami</a>
+          <Link to ="/kontak">Hubungi Kami</Link>
         </li>
         </ul>
       </div>

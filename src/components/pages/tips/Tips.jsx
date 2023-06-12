@@ -1,59 +1,67 @@
+import Footer from "../../footer/Footer";
+import NavigationBar from "../../nav/NavigationBar";
 import "./Tips.css";
 import React, { useState } from 'react';
 import Carousel from "react-bootstrap/Carousel";
+import React, { useState } from "react";
 function Tips() {
-  const [tipsData, setTipsData ]  = useState([
+  const [tipsData, setTipsData] = useState([
     {
       id: 1,
-      title: 'Penyebab Terjadinya Kebakaran Di Indonesia #1',
-      description: 'Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...',
-      imageSrc: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
+      title: "Penyebab Terjadinya Kebakaran Di Indonesia #1",
+      description:
+        "Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...",
+      imageSrc: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
     },
     {
       id: 2,
-      title: 'Penyebab Terjadinya Kebakaran Di Indonesia #2',
-      description: 'Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...',
-      imageSrc: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
+      title: "Penyebab Terjadinya Kebakaran Di Indonesia #2",
+      description:
+        "Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...",
+      imageSrc: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
     },
     {
       id: 3,
-      title: 'Penyebab Terjadinya Kebakaran Di Indonesia #3',
-      description: 'Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...',
-      imageSrc: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
+      title: "Penyebab Terjadinya Kebakaran Di Indonesia #3",
+      description:
+        "Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...",
+      imageSrc: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
     },
     {
       id: 4,
-      title: 'Penyebab Terjadinya Kebakaran Di Indonesia #4',
-      description: 'Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...',
-      imageSrc: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
+      title: "Penyebab Terjadinya Kebakaran Di Indonesia #4",
+      description:
+        "Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...",
+      imageSrc: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
     },
   ]);
 
   const [topics, setTopics] = useState([
     {
-      title: 'Penyebab Terjadinya Kebakaran Di Indonesia',
-      image: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
-      updatedAt: 'Last updated 3 mins ago',
+      title: "Penyebab Terjadinya Kebakaran Di Indonesia",
+      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
+      updatedAt: "Last updated 3 mins ago",
     },
     {
-      title: 'Dampak Aktivitas Bakar Sampah di Jabodetabek',
-      image: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
-      updatedAt: 'Last updated 3 mins ago',
+      title: "Dampak Aktivitas Bakar Sampah di Jabodetabek",
+      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
+      updatedAt: "Last updated 3 mins ago",
     },
     {
-      title: 'Dampak Pemanasan Global',
-      image: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
-      updatedAt: 'Last updated 3 mins ago',
+      title: "Dampak Pemanasan Global",
+      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
+      updatedAt: "Last updated 3 mins ago",
     },
     {
-      title: 'Kenapa Polutan Adalah Zat yang Harus Kita Hindari?',
-      image: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
-      updatedAt: 'Last updated 3 mins ago',
+      title: "Kenapa Polutan Adalah Zat yang Harus Kita Hindari?",
+      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
+      updatedAt: "Last updated 3 mins ago",
     },
   ]);
 
   return (
     <>
+      <NavigationBar />
       {/* //---------------------CarouselTips-------------------------- */}
       <Carousel className="tips-carousel">
         <Carousel.Item>
@@ -148,7 +156,7 @@ function Tips() {
        </div>
      </div>
      </div>
-       
+     <Footer />
      </>
    );
 }
