@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Programs.css";
+import "../programs/Programs.css";
 
 function Programs() {
   const [programs, setPrograms] = useState([

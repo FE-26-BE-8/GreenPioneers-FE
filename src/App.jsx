@@ -1,4 +1,4 @@
-import Programs from "../src/components/Programs.jsx"
+import Programs from "./components/pages/programs/Programs.jsx"
 function App() {
 
   return (
