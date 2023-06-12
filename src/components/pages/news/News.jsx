@@ -64,8 +64,8 @@ function News() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Melawan Nyala Membara</h3>
+              <p>Melintasi Awan Asap, Membuka Mata Hati pada Penderitaan Hutan yang Terbakar.</p>
             </div>
           </div>
         </Carousel.Item>
@@ -77,8 +77,8 @@ function News() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>Second slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Kekeringan</h3>
+              <p>Ketika Pohon-pohon Tertunduk dan Hati-hati Merana dalam Rindu Akan Air</p>
             </div>
           </div>
         </Carousel.Item>
@@ -90,8 +90,8 @@ function News() {
           />
           <div className="wrapper-title-carousel">
             <div className="title-carousel">
-              <h3>Third slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Renungan Dalam Genangan</h3>
+              <p>Meresapi Keterikatan Manusia dengan Alam Semesta</p>
             </div>
           </div>
         </Carousel.Item>
