@@ -147,6 +147,7 @@ function Home() {
           </div>
         </Carousel.Item>
       </Carousel>
+
       {/* ---------------------PROGRAM EVENTS-------------------- */}
       <div className="program-events-container">
       <h1 className="heading">Program Events</h1>
@@ -192,8 +193,8 @@ function Home() {
               </div>
             ))}
           </div>
-          {/* //---------------------Trending Topics-------------------------- */}
-          <div className="col-md-4 mt-lg-5 trend-container">
+             {/* //---------------------Trending Topics-------------------------- */}
+             <div className="col-md-4 mt-lg-5 trend-container">
             <div className="trending-topics">
               <h2>Trending Topics</h2>
               <ul>
