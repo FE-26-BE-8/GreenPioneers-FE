@@ -1,47 +1,22 @@
 import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import UseApiCall from "../../../helper/UseApiCall";
 import "./Programs.css";
 
 function Programs() {
-  const [programs, setPrograms] = useState([
-    {
-      id: 1,
-      imageSrc: "https://i.ibb.co/rb8r49W/image-2023-06-05-102713445.png",
-      title: "Program Menanam Tumbuhan #1",
-      description:
-        "Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon. Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon dan menjaga kelestarian alam",
-    },
-    {
-      id: 2,
-      imageSrc: "https://i.ibb.co/rb8r49W/image-2023-06-05-102713445.png",
-      title: "Program Menanam Tumbuhan #2",
-      description:
-        "Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon.",
-    },
-    {
-      id: 3,
-      imageSrc: "https://i.ibb.co/rb8r49W/image-2023-06-05-102713445.png",
-      title: "Program Menanam Tumbuhan #3",
-      description:
-        "Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon.",
-    },
-    {
-      id: 4,
-      imageSrc: "https://i.ibb.co/rb8r49W/image-2023-06-05-102713445.png",
-      title: "Program Menanam Tumbuhan #4",
-      description:
-        "Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon. Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon dan menjaga kelestarian alam",
-    },
-    {
-      id: 5,
-      imageSrc: "https://i.ibb.co/rb8r49W/image-2023-06-05-102713445.png",
-      title: "Program Menanam Tumbuhan #5",
-      description:
-        "Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon. Sebuah program yang bertujuan untuk meningkatkan jumlah penanaman pohon dan menjaga kelestarian alam",
-    },
-  ]);
+  const {data, fetchData, error} = UseApiCall();
+  const [programs, setPrograms] = useState(null);
+
+  useEffect(() => {
+    fetchData("https://pear-vast-bream.cyclic.app/api/program", "get", null, {'authorization': "Bearer "+ localStorage.getItem("Authorization") } ).then(data => setPrograms(data.data.data.program))
+
+  },[])
+
+  useEffect(() => {
+    console.log(programs)
+  },[programs])
 
   const truncateDescription = (description, maxWords) => {
     const words = description.split(" ");
@@ -96,6 +71,9 @@ function Programs() {
           </div>
         </Carousel.Item>
       </Carousel>
+
+        {/* //---------------------Programs-------------------------- */}
+
       <div className="ajakan">
         <h1>Ayo, mari ikut serta dalam program tentang perubahan iklim dan berkontribusi dalam menjaga keberlanjutan bumi kita bersama!</h1>
       </div>
@@ -108,15 +86,15 @@ function Programs() {
             <div className="program-container" key={program.id}>
               <div className="img-container">
                 <img
-                  src={program.imageSrc}
-                  alt={program.title}
+                  src={program.gambar}
+                  alt={program.judul}
                   className="program-image"
                 />
               </div>
               <div className="text-container">
-                <h2 className="program-title">{program.title}</h2>
+                <h2 className="program-title">{program.judul}</h2>
                 <p className="program-description">
-                  {truncateDescription(program.description, 12)}
+                  {truncateDescription(program.isi, 12)}
                 </p>
                 <div className="button-container">
                   <button className="follow-button">Ikuti Program</button>
