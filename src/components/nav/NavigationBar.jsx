@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+
 function NavigationBar() {
   const navigate = useNavigate();
   function handleButton(url) {
@@ -39,9 +40,9 @@ function NavigationBar() {
               <Link to="/list-tips" className="m-auto nav-list active">
                 Tips
               </Link>
-              <Nav.Link href="#action1" className="m-auto nav-list active">
+              <Link to="/list-programs" className="m-auto nav-list active">
                 Program
-              </Nav.Link>
+              </Link>
             </Nav>
             <div className="d-flex gap-2 btn-nav">
               <Button
