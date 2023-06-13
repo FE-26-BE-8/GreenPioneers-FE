@@ -24,7 +24,7 @@ function News() {
     <>
     <NavigationBar />
     {/* //---------------------CarouselNews-------------------------- */}
-    <Carousel className="home-carousel">
+    <Carousel className="news-carousel">
      <Carousel.Item>
        <img
          className="d-block w-100"

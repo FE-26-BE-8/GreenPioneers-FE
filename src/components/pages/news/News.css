@@ -9,7 +9,7 @@
 }
 
 /* --------------Carousel News CSS ------------*/
-.home-carousel img {
+.news-carousel img {
   height: 90vh;
   object-fit: cover;
 }
