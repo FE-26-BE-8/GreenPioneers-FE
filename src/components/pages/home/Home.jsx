@@ -105,9 +105,9 @@ function Home() {
 
   return (
     <>
-    <NavigationBar />
-     {/* //---------------------CarouselHome-------------------------- */}
-    <Carousel className="home-carousel">
+      <NavigationBar />
+      {/* //---------------------CarouselHome-------------------------- */}
+      <Carousel className="home-carousel">
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -150,76 +150,79 @@ function Home() {
       </Carousel>
 
       {/* ---------------------PROGRAM EVENTS-------------------- */}
-      <div className="program-events-container">
-      <h1 className="heading">Program Events</h1>
-      <div className="box-container-1">
-        {programEvents.map((event) => (
-          <div className="program-events-card" key={event.id}>
-          <img src={event.imageSrc} alt={event.title} />
-            <div className="title-events">
-              <h3>{event.title}</h3>
-            </div>
-            <div className="detail-events">
-              <p>{event.description}</p>
-            </div>
-            <button className="btn-event">Selengkapnya</button>
-          </div>
-        ))}
-      </div>
-      </div>
-        {/* //---------------------NEWS-------------------------- */}
-
-        <div className="news-container container">
-          <div className="col-md-7">
-            <h1 className="heading">News</h1>
-            {newsData.map((news) => (
-              <div className="card mb-3 p-4 news-card" key={news.id}>
-                <div className="row g-0">
-                  <div className="col-md-6">
-                    <h5 className="card-title">{news.title}</h5>
-                    <p className="card-text">{news.description}</p>
-                    <div className="text-center btn-article">
-                      <button className="btn-news">Baca Selengkapnya</button>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="card-body">
-                      <img
-                        src={news.imageSrc}
-                        alt="Kebakaran Hutan"
-                        className="img-fluid img-news"
-                      />
-                    </div>
-                  </div>
+      <div className="background-container">
+        <div className="program-events-container">
+          <h1 className="heading">Program Events</h1>
+          <div className="box-container-1">
+            {programEvents.map((event) => (
+              <div className="program-events-card" key={event.id}>
+                <img src={event.imageSrc} alt={event.title} />
+                <div className="title-events">
+                  <h3>{event.title}</h3>
                 </div>
+                <div className="detail-events">
+                  <p>{event.description}</p>
+                </div>
+                <button className="btn-event">Selengkapnya</button>
               </div>
             ))}
           </div>
-             {/* //---------------------Trending Topics-------------------------- */}
-             <div className="col-md-4 mt-lg-5 trend-container">
-            <div className="trending-topics">
-              <h2>Trending Topics</h2>
-              <ul>
-                {topics.map((topic, index) => (
-                  <li key={index}>
-                    <div className="topic">
-                      <img src={topic.image} alt="Trending Topic" />
-                      <div>
-                        <a href="#">{topic.title}</a>
-                        <p className="card-text">
-                          <small className="text-body-secondary">
-                            {topic.updatedAt}
-                          </small>
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+        </div>
+      </div>
+
+      {/* //---------------------NEWS-------------------------- */}
+      <div className="background-container-2"> 
+      <div className="news-container container">
+        <div className="col-md-7">
+          <h1 className="heading">News</h1>
+          {newsData.map((news) => (
+            <div className="card mb-3 p-4 news-card" key={news.id}>
+              <div className="row g-0">
+                <div className="col-md-6">
+                  <h5 className="card-title">{news.title}</h5>
+                  <p className="card-text">{news.description}</p>
+                  <div className="text-center btn-article">
+                    <button className="btn-news">Baca Selengkapnya</button>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="card-body">
+                    <img
+                      src={news.imageSrc}
+                      alt="Kebakaran Hutan"
+                      className="img-fluid img-news"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
+          ))}
+        </div>
+        {/* //---------------------Trending Topics-------------------------- */}
+        <div className="col-md-4 mt-lg-5 trend-container">
+          <div className="trending-topics">
+            <h2>Trending Topics</h2>
+            <ul>
+              {topics.map((topic, index) => (
+                <li key={index}>
+                  <div className="topic">
+                    <img src={topic.image} alt="Trending Topic" />
+                    <div>
+                      <a href="#">{topic.title}</a>
+                      <p className="card-text">
+                        <small className="text-body-secondary">
+                          {topic.updatedAt}
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-  
+      </div>
+      </div>
       <Footer />
     </>
   );
