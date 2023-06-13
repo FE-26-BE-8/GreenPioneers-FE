@@ -1,28 +1,33 @@
-import React, { useState } from "react";
-import "../css/DetailNews.css";
+import React, { useState, useEffect } from "react";
+import UseApiCall from "../../../helper/UseApiCall";
+import "./DetailNews.css";
+import { useParams } from "react-router-dom";
 
 function DetailNews() {
-  const [detailNews, setDetailNews] = useState([
-    {
-        id: 1,
-        title: 'Penyebab Terjadinya Kebakaran Di Indonesia #1',
-        description: 'Penyebab kebakaran hutan di Indonesia Pada dasar nya memiliki dua penyebab, yaitu kebakaran yang disebabkan oleh faktor alam dan juga faktor manusia namun sebagaian besar kebakaran hutan yang terjadi di Indonesia belakangan ini disebabkan karena ulah dari manusia nya sendiri...',
-        imageSrc: 'https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png',
-      },
-  ]);
+  const { id } = useParams();
+  const { fetchData, error } = UseApiCall();
+  const [detailNews, setDetailNews] = useState(null);
+
+  useEffect(() => {
+    fetchData(`https://pear-vast-bream.cyclic.app/api/news/${id}`, "get", null, {
+      authorization: "Bearer " + localStorage.getItem("Authorization"),
+    }).then((data) => setDetailNews(data.data.data.news));
+  }, [id]);
 
   return (
-    <>
-      <div className="container">
-        {detailNews.map((detailNew) => (
+    <div className="container">
+      {detailNews ? (
+        detailNews.map((detailNew) => (
           <div className="news" key={detailNew.id}>
-            <h2 className="title">{detailNew.title}</h2>
-            <img src={detailNew.imageSrc} alt="Gambar News" />
-            <p>{detailNew.description}</p>
+            <h2 className="title">{detailNew.judul}</h2>
+            <img src={detailNew.gambar} alt="Gambar News" />
+            <p>{detailNew.isi}</p>
           </div>
-        ))}
-      </div>
-    </>
+        ))
+      ) : (
+        <h1>Data Tidak Ditemukan!</h1>
+      )}
+    </div>
   );
 }
 
