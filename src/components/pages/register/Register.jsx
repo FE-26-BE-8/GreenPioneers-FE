@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
 import UseApiCall from "../../../helper/UseApiCall";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -103,7 +103,7 @@ const Register = () => {
             <button type="submit">Register</button>
           </form>
           <p className="signup">
-            Already have an account? <a href="#">Login</a>
+            Already have an account? <Link to="/login">Login</Link>
           </p>
         </div>
         <div className="login-right">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import UseApiCall from "../../../helper/UseApiCall";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -69,7 +69,7 @@ const Login = () => {
             <button type="submit">Login</button>
           </form>
           <p className="signup">
-            Don't have an account? <a href="register.html">Sign Up</a>
+            Don't have an account? <Link to="/register">Sign Up</Link>
           </p>
         </div>
         <div className="login-right">
