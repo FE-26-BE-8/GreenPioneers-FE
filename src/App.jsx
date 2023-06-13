@@ -1,6 +1,7 @@
 import Login from "./components/pages/login/Login"
 import Register from './components/pages/register/Register';
-import News from "./components/pages/news/News"
+import News from "./components/pages/news/News";
+import DetailNews from "./components/pages/news/DetailNews";
 import Tips from "./components/pages/tips/Tips";
 import Home from "./components/pages/home/Home";
 import Programs from "./components/pages/programs/Programs.jsx"
@@ -22,10 +23,14 @@ function App() {
       element: <Tips />,
     },
     {
+      path: "/list-news/:id",
+      element: <DetailNews />,
+    },
+    {
       path: "/list-news",
       element: <News />,
     },
-        {
+    {
       path: "/list-programs",
       element: <Programs />,
     },
