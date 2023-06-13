@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* --------------Carousel Tips CSS ------------*/
+.tips-carousel img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.wrapper-title-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.title-carousel {
+  color: white;
+  text-align: center;
+}
+
+.title-carousel h3 {
+  font-size: 2.5rem;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2.5px;
+}
+
+.title-carousel p {
+  font-size: 1.3rem;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+  /* line-height: 25px; */
+  letter-spacing: 2.5px;
+}
+
+/* ---------------Tips CSS -----------------*/
+
+body .tips-container {
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.4);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+.heading {
+  margin-bottom: 25px;
+  color: #00253A;
+  font-size: 50px;
+  font-weight: 700;
+
+}
+
+
+.tips-container .img-tips {
+height: 100%;
+border-radius: 15px;
+margin-top: 25px;
+cursor: pointer;
+}
+
+.tips-container .img-tips:hover {
+  opacity: 0.7;
+}
+
+.tips-container .tips-card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.4);
+}
+
+.card-text{
+  font-size: 14px;
+  text-align:justify;
+  margin-right: 15px;
+}
+
+
+.btn-tips{
+  padding: 5px 30px;
+  background-color: #04991C;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: #FFFF;
+  border-bottom: 3px solid #3C6255;
+  color: #FFFF;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.btn-tips:hover{
+  background-color: #41644A;
+  border-bottom: 3px solid #04991C
+}
+
+.trending-topics {
+border-radius: 10px;
+background-color: #fff;
+padding: 20px;
+border: 1px solid #ddd;
+}
+
+.trending-topics h2 {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.trending-topics ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.trending-topics li {
+margin-bottom: 10px;
+}
+
+.topic {
+display: flex;
+align-items: center;
+}
+
+.topic img {
+border-radius: 5px;
+width: 150px;
+height: 100px;
+margin-right: 10px;
+}
+
+.topic a {
+font-size: 12px;
+color: #333;
+text-decoration: none;
+}
+
+@media only screen and (max-width: 676px) {
+  .title-carousel{
+    width: 50%;
+  }
+
+  .title-carousel h3{
+    font-size: 2rem;
+  }
+
+  .title-carousel p{
+    font-size: 1rem;
+  }
+
+  .tips-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .heading{
+       text-align: center;
+    }
+    .tips-card {
+      padding: 0;
+      margin: 0;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    .trending-topics h2{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .trend-container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+}
