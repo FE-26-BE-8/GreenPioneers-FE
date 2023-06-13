@@ -1,5 +1,8 @@
+import Footer from "../../footer/Footer";
+import NavigationBar from "../../nav/NavigationBar";
 import React, { useState } from "react";
-import "../programs/Programs.css";
+import Carousel from "react-bootstrap/Carousel";
+import "./Programs.css";
 
 function Programs() {
   const [programs, setPrograms] = useState([
@@ -50,6 +53,49 @@ function Programs() {
 
   return (
     <>
+      <NavigationBar />
+      {/* //---------------------CarouselPrograms-------------------------- */}
+    <Carousel className="programs-carousel">
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Programs-Carosel-1.jpg"
+            alt="First slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Mengubah Dunia Satu Langkah pada Waktu</h3>
+              <p>Gabung dalam Program Peduli Lingkungan Kami!</p>
+            </div>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Programs-Carosel-2.jpg"
+            alt="Second slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Kami Membutuhkanmu</h3>
+              <p>Bergabunglah dalam Program Peduli Lingkungan <br/> dan Bersama Kita Jadikan Bumi Tempat yang Lebih Baik!</p>
+            </div>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="../src/assets/Carosel/Programs-Carosel-3.jpg"
+            alt="Third slide"
+          />
+          <div className="wrapper-title-carousel">
+            <div className="title-carousel">
+              <h3>Satu Aksi, Satu Perubahan</h3>
+              <p>Jadilah Bagian dari Program Peduli Lingkungan dan Bantu Lindungi Alam! </p>
+            </div>
+          </div>
+        </Carousel.Item>
+      </Carousel>
       <div className="programs-container">
         <div className="container">
           <h1 className="program-heading">Program Kami</h1>
@@ -77,6 +123,7 @@ function Programs() {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
