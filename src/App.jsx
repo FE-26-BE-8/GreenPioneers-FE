@@ -1,9 +1,10 @@
-import Footer from "./components/footer/Footer"
+import LinkProgram from "./components/pages/LinkProgram"
 
 function App() {
+
   return (
     <>
-    <Footer />
+      <LinkProgram/>
     </>
   )
 }
