@@ -18,7 +18,6 @@ function NavigationBar() {
     navigate("/login")
   }
 
-
   useEffect(() => {
     const userLogin = localStorage.getItem("Authorization");
     if (userLogin) {
@@ -72,7 +71,7 @@ function NavigationBar() {
                   </Button>
                   <Button
                     onClick={() => handleButton("/register")}
-                    variant="outline-success"
+                    variant="success"
                     className="w-100 btn-register"
                   >
                     Register

@@ -9,7 +9,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    background-color: #C1D0B5;
+    background-color: #00425A;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.35);
 }
 
@@ -21,19 +21,19 @@
 }
 
 .logo-name1 a {
-    color: #3C6255;
+    color: #1F8A70;
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
 }
 
 .logo-name1 a:hover {
-    color: #61876E;
+    color: #FC7300;
     transition: all .3s ease-in-out;
 }
 
 .logo-name2 a {
-    color: #61876E;
+    color: #BFDB38;
     padding-left: 1px;
     font-weight: 400;
     cursor: pointer;
@@ -42,18 +42,18 @@
 }
 
 .logo-name2 a:hover {
-    color: #3C6255;
+    color: #FC7300;
     transition: all .3s ease-in-out;
 }
 
 .wrapper-navlist .nav-list{
-    color: #FFFF;
+    color: #BFDB38;
     text-decoration: none;
     font-weight: 500;
     padding: 20px;
 }
 .wrapper-navlist .nav-list:hover{
-    color: #3C6255;
+    color: #FC7300;
 }
 
 
@@ -65,28 +65,30 @@
 
 .btn-nav .btn-login {
     padding: 10px 10px;
-    background-color: #3C6255;
+    /* background-color: #3C6255; */
     font-size: 1rem;
     color: #FFFF;
     border-radius: 5px;
     border: none;
     margin-right: 10px;
-    
+    font-weight: 500;
 }
 
 .btn-nav .btn-login:hover {
-    background-color: #61876E;
+    background-color: #00425A;
 }
 
 .btn-nav .btn-register {
-    background-color: #C1D0B5 ;
+    background-color: #FC7300 ;
     color: #FFFF ;
     border: none ;
     border-radius: 5px;
     font-size: 1rem;
     padding: 10px 10px;
+    font-weight: 500;
 }
 
 .btn-nav .btn-register:hover {
-    background-color: #61876E;
+    background-color: #BFDB38 ;
+    color:#00425A;
 }
