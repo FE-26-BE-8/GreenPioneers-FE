@@ -106,6 +106,7 @@ function Home() {
   return (
     <>
     <NavigationBar />
+     {/* //---------------------CarouselHome-------------------------- */}
     <Carousel className="home-carousel">
         <Carousel.Item>
           <img
