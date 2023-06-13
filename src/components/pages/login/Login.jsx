@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./Login.css";
 import UseApiCall from "../../../helper/UseApiCall";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const {data, fetchData, error} = UseApiCall();
+  const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -23,15 +25,17 @@ const Login = () => {
 
     const userInput = {
       email,
-      password,
+      password
     }
     const data = await fetchData("https://pear-vast-bream.cyclic.app/api/login", "post", userInput)
     if (data.status === 200) {
       alert("Berhasil Login")
       console.log(data.headers['authorization'])
       localStorage.setItem("Authorization",data.headers['authorization'])
+      navigate("/list-news") 
     }
   };
+
 
 
   return (
