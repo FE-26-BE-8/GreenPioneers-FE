@@ -11,7 +11,6 @@ function Programs() {
 
   useEffect(() => {
     fetchData("https://pear-vast-bream.cyclic.app/api/program", "get", null, {'authorization': "Bearer "+ localStorage.getItem("Authorization") } ).then(data => setPrograms(data.data.data.program))
-
   },[])
 
   useEffect(() => {
@@ -26,6 +25,7 @@ function Programs() {
     return description;
   };
 
+  
   return (
     <>
       <NavigationBar />
@@ -82,7 +82,7 @@ function Programs() {
           <h1 className="program-heading">Program Kami</h1>
         </div>
         <div className="center-container">
-          {programs.map((program) => (
+           { programs ? programs.map((program) => (
             <div className="program-container" key={program.id}>
               <div className="img-container">
                 <img
@@ -101,7 +101,9 @@ function Programs() {
                 </div>
               </div>
             </div>
-          ))}
+          )): (
+            <h1>Data Tidak Ditemukan</h1>
+          )}
         </div>
       </div>
       <Footer />
