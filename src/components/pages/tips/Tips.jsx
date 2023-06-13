@@ -35,28 +35,6 @@ function Tips() {
     console.log(newsData);
   }, [newsData]);
 
-  const [topics, setTopics] = useState([
-    {
-      title: "Penyebab Terjadinya Kebakaran Di Indonesia",
-      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
-      updatedAt: "Last updated 3 mins ago",
-    },
-    {
-      title: "Dampak Aktivitas Bakar Sampah di Jabodetabek",
-      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
-      updatedAt: "Last updated 3 mins ago",
-    },
-    {
-      title: "Dampak Pemanasan Global",
-      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
-      updatedAt: "Last updated 3 mins ago",
-    },
-    {
-      title: "Kenapa Polutan Adalah Zat yang Harus Kita Hindari?",
-      image: "https://i.ibb.co/M8XhDK3/image-2023-06-05-122457381.png",
-      updatedAt: "Last updated 3 mins ago",
-    },
-  ]);
 
   return (
     <>
