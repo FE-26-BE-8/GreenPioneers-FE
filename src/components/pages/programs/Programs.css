@@ -50,6 +50,12 @@
 
 /* ---------------Programs CSS -----------------*/
 
+.ajakan{
+  width: 1140px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
 .programs-container {
   width: 1140px;
   margin: 0 auto;
@@ -172,6 +178,11 @@
 
   .title-carousel p{
     font-size: 1rem;
+  }
+
+  .ajakan{
+    width: 100%;
+    padding: 10px;
   }
 
     .programs-container {
