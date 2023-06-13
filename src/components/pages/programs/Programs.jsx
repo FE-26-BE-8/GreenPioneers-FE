@@ -96,6 +96,9 @@ function Programs() {
           </div>
         </Carousel.Item>
       </Carousel>
+      <div className="ajakan">
+        <h1>Ayo, mari ikut serta dalam program tentang perubahan iklim dan berkontribusi dalam menjaga keberlanjutan bumi kita bersama!</h1>
+      </div>
       <div className="programs-container">
         <div className="container">
           <h1 className="program-heading">Program Kami</h1>
