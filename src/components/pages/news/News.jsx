@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading"
+import { useNavigate } from "react-router-dom";
 import "./News.css";
 
 
@@ -12,18 +13,37 @@ function News() {
   const {data, fetchData, error} = UseApiCall();
   const [newsData, setNewsData] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // Tambahkan state isLoading
+  const navigate = useNavigate();
+  const handleDetailButton = (id) => {
+    navigate(`/list-news/${id}`)
+  } 
 
   useEffect(() => {
-    fetchData("https://pear-vast-bream.cyclic.app/api/news", "get", null, {
-      'authorization': "Bearer " + localStorage.getItem("Authorization")
-    }).then(data => {setNewsData(data.data.data.news);
-      setIsLoading(false); // Set isLoading ke false setelah mendapatkan data
-    });
+    const userLogin = localStorage.getItem("Authorization")
+    console.log(userLogin,"=> ini localStorage")
+    if (userLogin) {
+      fetchData("https://pear-vast-bream.cyclic.app/api/news", "get", null, {
+        'authorization': "Bearer " + localStorage.getItem("Authorization")
+      }).then(data => {setNewsData(data.data.data.news);
+        setIsLoading(false); // Set isLoading ke false setelah mendapatkan data
+      });
+    } else {
+      alert("Silahkan Login Terlebih Dahulu")
+      navigate("/login")
+    }
   }, []);
 
   useEffect(() => {
     console.log(newsData)
   },[newsData])
+
+  const truncateDescription = (description, maxWords) => {
+    const words = description.split(" ");
+    if (words.length > maxWords) {
+      return words.slice(0, maxWords).join(" ") + "...";
+    }
+    return description;
+  };
 
   return (
     <>
@@ -85,9 +105,10 @@ function News() {
         <div className="row g-0">
           <div className="col-md-6">
             <h5 className="card-title">{news.judul}</h5>
-            <p className="card-text">{news.isi}</p>
+            <p className="card-text">
+            {truncateDescription(news.isi, 30)}</p>
             <div className="text-center btn-article">
-              <button className="btn-news">Baca Selengkapnya</button>
+              <button onClick = {() => handleDetailButton(news.id) } className="btn-news">Baca Selengkapnya</button>
             </div>
           </div>
           <div className="col-md-6">

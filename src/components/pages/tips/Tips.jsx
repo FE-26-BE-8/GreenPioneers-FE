@@ -35,6 +35,13 @@ function Tips() {
     console.log(newsData);
   }, [newsData]);
 
+  const truncateDescription = (description, maxWords) => {
+    const words = description.split(" ");
+    if (words.length > maxWords) {
+      return words.slice(0, maxWords).join(" ") + "...";
+    }
+    return description;
+  };
 
   return (
     <>
@@ -94,7 +101,9 @@ function Tips() {
                 <div className="row g-0">
                   <div className="col-md-6">
                     <h5 className="card-title">{tips.judul}</h5>
-                    <p className="card-text">{tips.isi}</p>
+                    <p className="card-text">
+                    {truncateDescription(tips.isi, 50)}
+                    </p>
                     <div className="text-center btn-article">
                       <button className="btn-tips">Baca Selengkapnya</button>
                     </div>
