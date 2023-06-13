@@ -4,12 +4,28 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { useEffect, useState } from "react";
 
 function NavigationBar() {
   const navigate = useNavigate();
+  const [isUserLogin, setIsUserLogin] = useState(false);
   function handleButton(url) {
     navigate(url);
   }
+  function handleLogout() {
+    localStorage.clear()
+    alert("Berhasil Logout!")
+    navigate("/login")
+  }
+
+
+  useEffect(() => {
+    const userLogin = localStorage.getItem("Authorization");
+    if (userLogin) {
+      setIsUserLogin(true);
+    }
+  }, [isUserLogin]);
+
   return (
     <>
       <Navbar className="container-nav" expand="lg">
@@ -45,20 +61,32 @@ function NavigationBar() {
               </Link>
             </Nav>
             <div className="d-flex gap-2 btn-nav">
-              <Button
-                onClick={() => handleButton("/login")}
-                variant="outline-success"
-                className="w-100 btn-login"
-              >
-                Login
-              </Button>
-              <Button
-                onClick={() => handleButton("/register")}
-                variant="outline-success"
-                className="w-100 btn-register"
-              >
-                Register
-              </Button>
+              {!isUserLogin ? (
+                <>
+                  <Button
+                    onClick={() => handleButton("/login")}
+                    variant="outline-success"
+                    className="w-100 btn-login"
+                  >
+                    Login
+                  </Button>
+                  <Button
+                    onClick={() => handleButton("/register")}
+                    variant="outline-success"
+                    className="w-100 btn-register"
+                  >
+                    Register
+                  </Button>
+                </>
+              ) : (
+                <Button
+                  onClick={handleLogout}
+                  variant="outline-success"
+                  className="w-100 btn-register"
+                >
+                  Logout
+                </Button>
+              )}
             </div>
           </Navbar.Collapse>
         </Container>
