@@ -3,6 +3,7 @@ import Register from './components/Register';
 import News from "./components/pages/news/News"
 import Tips from "./components/pages/tips/Tips";
 import Home from "./components/pages/home/Home";
+import Programs from "./components/pages/programs/Programs.jsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContactForm from "./components/pages/contact/ContactForm";
 
@@ -23,6 +24,10 @@ function App() {
     {
       path: "/list-news",
       element: <News />,
+    },
+        {
+      path: "/list-programs",
+      element: <Programs />,
     },
     {
       path: "/register",
