@@ -1,5 +1,5 @@
-import Login from "./components/Login"
-import Register from './components/Register';
+import Login from "./components/pages/login/Login"
+import Register from './components/pages/register/Register';
 import News from "./components/pages/news/News"
 import Tips from "./components/pages/tips/Tips";
 import Home from "./components/pages/home/Home";
