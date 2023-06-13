@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
 import UseApiCall from "../../../helper/UseApiCall";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -8,6 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
   const {data, fetchData, error} = UseApiCall();
+  const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +47,8 @@ const Register = () => {
 
     const data = await fetchData("https://pear-vast-bream.cyclic.app/api/register", "post", userInput)
     if (data.status === 201) {
-      alert("Berhasil Register")
+      alert("Berhasil Register Silahkan Login")
+      navigate("/login")
     } else if (error){
       alert("Gagal Register!")
     } 
