@@ -1,4 +1,4 @@
-.container {
+.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
   border-radius: 5px;
 }
 
-h1 {
+.title-contact {
   text-align: right;
   margin-bottom: 20px;
 }
@@ -25,18 +25,18 @@ h1 {
   margin-top: 20px;
 }
 
-/* Optional: Add styles for form labels */
+
 .form-label {
   font-weight: bold;
   margin-right: 500px;
 }
 
-/* Optional: Add styles for form inputs */
+
 .form-control {
   margin-bottom: 20px;
 }
 
-/* Optional: Add styles for form submit button */
+
 .btn-primary {
   width: 100%;
 }
