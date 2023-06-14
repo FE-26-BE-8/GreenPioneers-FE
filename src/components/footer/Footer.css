@@ -38,19 +38,19 @@ footer {
     
 }
 
-.logo-name1 a {
+.footer-logo .logo-name1 a {
     color: #3C6255;
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
 }
 
-.logo-name1 a:hover {
+.footer-logo .logo-name1 a:hover {
     color: #61876E;
     transition: all .3s ease-in-out;
 }
 
-.logo-name2 a {
+.footer-logo .logo-name2 a {
     color: #61876E;
     padding-left: 1px;
     font-weight: 400;
@@ -59,7 +59,7 @@ footer {
 
 }
 
-.logo-name2 a:hover {
+.footer-logo .logo-name2 a:hover {
     color: #3C6255;
     transition: all .3s ease-in-out;
 }
