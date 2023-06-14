@@ -73,11 +73,11 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit">Login</button>
+            <button className="btn-login" type="submit">Login</button>
           </form>
-          <p className="signup">
+          <div className="signup">
             Don't have an account? <Link to="/register">Sign Up</Link>
-          </p>
+          </div>
         </div>
         <div className="login-right">
           <img src="../src/assets/img/gambar.png" alt="Gambar-Login" />

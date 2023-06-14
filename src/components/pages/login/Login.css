@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #FFFBE9;
+    background: #00425A;
 }
 
 .login-container {
@@ -47,16 +47,6 @@
     margin-bottom: 25px;
 }
 
-.login-body .login-container .login-left .login-forms .forgot {
-    text-align: center;
-    margin: 10px;
-}
-
-.login-body .login-container .login-left .login-forms .forgot a{
-	text-decoration: none;
-	color: darkgreen;
-	font-weight: bold;
-}
 
 .login-body .login-container .login-right img {
     width: 450px;
@@ -125,6 +115,22 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+.login-body .login-container .login-left .signup a:hover{
+    color: #00425A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-login {
+    margin-bottom: 25px;
+    background-color:#00425a !important;
+}
+
+.btn-login:hover {
+    background-color: #E57C23 !important;
+}
+
 
 @media (max-width: 880px) {
     .login-body.login-container {
