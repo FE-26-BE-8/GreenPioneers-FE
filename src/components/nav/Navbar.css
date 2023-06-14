@@ -12,6 +12,10 @@
     background-color: #00425A;
 }
 
+.nav-toggle{
+    background-color: #1F8A70 !important;
+}
+
 .nav-logo {
     display: flex;
     flex-direction: row;
@@ -60,6 +64,7 @@
     .wrapper-navlist .nav-list{
     text-align: center;
     }
+
 }
 
 .btn-nav .btn-login-nav {
