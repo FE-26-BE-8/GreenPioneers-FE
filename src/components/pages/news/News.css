@@ -48,6 +48,8 @@
 
 /* ---------------NEWS CSS -----------------*/
 
+
+
 body .news-container {
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(0,0,0,.4);
@@ -84,6 +86,10 @@ body .news-container {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
+.card-title {
+  text-align: left;
+}
+
 .card-text {
   font-size: 14px;
   text-align: justify;
@@ -107,6 +113,15 @@ body .news-container {
   background-color: #41644a;
   border-bottom: 3px solid #04991c;
 }
+
+/* ---------------Trending News CSS -----------------*/
+
+.trend-container {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+}
+
 
 .trending-topics {
   border-radius: 10px;
@@ -183,6 +198,7 @@ body .news-container {
     .trend-container {
       width: 80%;
       margin-left: 55px;
+      position: relative;
     }
   }
 }
