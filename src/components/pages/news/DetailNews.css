@@ -8,11 +8,24 @@
   text-decoration: none;
 }
 
-.container {
+.container-detail-news {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0 10px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+ .btn-back a{
+  display: flex;
+  text-decoration: none;
+  padding: 10px 10px;
+  color: #00425a;
+  font-size: 1.1rem;
+  font-weight: 500;
+ 
+  
 }
 
 .news {

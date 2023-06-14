@@ -18,6 +18,10 @@ function Tips() {
   const handleDetailButton = (id) => {
     navigate(`/list-tips/${id}`);
   };
+  const handleDetailButton2 = (id) => {
+    navigate(`/list-news/${id}`);
+  };
+  
 
   useEffect(() => {
     const userLogin = localStorage.getItem("Authorization");
@@ -166,7 +170,7 @@ function Tips() {
                           <img
                             src={topic.gambar}
                             alt="Trending Topic"
-                            onClick={() => handleDetailButton(topic.id)}
+                            onClick={() => handleDetailButton2(topic.id)}
                           />
                           <div>
                             <a href="#">{topic.judul}</a>

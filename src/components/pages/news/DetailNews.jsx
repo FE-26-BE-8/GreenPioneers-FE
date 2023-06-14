@@ -3,7 +3,7 @@ import NavigationBar from "../../nav/NavigationBar";
 import React, { useState, useEffect } from "react";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./DetailNews.css";
 
 function DetailNews() {
@@ -33,11 +33,14 @@ function DetailNews() {
   return (
     <>
       <NavigationBar />
-      <div className="container">
+      <div className="container-detail-news">
         {isLoading ? (
           <Loading />
         ) : detailNews ? (
           <div className="news" key={detailNews.id}>
+            <div className="btn-back">
+            <Link to="/list-news" >← Kembali</Link>
+            </div>
             <h2 className="title">{detailNews.judul}</h2>
             <img src={detailNews.gambar} alt="Gambar News" />
             <p>{detailNews.isi}</p>

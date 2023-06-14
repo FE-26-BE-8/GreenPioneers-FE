@@ -8,11 +8,13 @@
   text-decoration: none;
 }
 
-.container {
+.container-link-programs {
   width: 1140px;
   margin: 0 auto;
   background-color: #f2f2f2;
   padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .link-container {

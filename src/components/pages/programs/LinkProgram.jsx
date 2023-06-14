@@ -2,7 +2,7 @@ import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
 import React, { useState, useEffect } from "react";
 import UseApiCall from "../../../helper/UseApiCall";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Loading from "../../loading/Loading";
 import "./LinkProgram.css";
 
@@ -27,8 +27,11 @@ function LinkProgram() {
   return (
     <>
       <NavigationBar />
-      <div className="container">
+      <div className="container-link-programs">
         <div className="link-container">
+        <div className="btn-back">
+            <Link to="/list-programs" >← Kembali</Link>
+            </div>
           <h1 className="link-title">Terimakasih sudah mengikuti program!</h1>
           <p>Berikut rincian program yang diikuti</p>
           {isLoading ? (
