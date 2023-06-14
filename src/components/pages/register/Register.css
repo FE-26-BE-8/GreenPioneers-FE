@@ -7,72 +7,63 @@
     font-family:'Poppins', sans-serif;
 }
 
-.login-body {
+.register-body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #FFFBE9;
+    background: #00425A;
 }
 
-.login-container {
-    width: 100%;
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 850px;
+    max-height: 650px;
+    height: 100%;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.login-body .login-container .login-left {
+.register-body .register-container .register-left {
     width: 400px;
 }
 
-.login-body .login-container .login-left .login-forms {
+.register-body .register-container .register-left .register-forms {
     width: 250px;
-    margin: 60px auto;
+    margin: 24px auto;
 }
 
-.login-body .login-container .login-left .login-forms .login-title {
+.register-body .register-container .register-left .register-forms .register-title {
     margin: 20px;
     text-align: center;
     font-weight: bolder;
     text-transform: uppercase;
 }
 
-.login-body .login-container .login-left .login-hr {
+.register-body .register-container .register-left .register-hr {
     border-top: 2px solid green;
     margin-bottom: 25px;
 }
 
-.login-body .login-container .login-left .login-forms .forgot {
-    text-align: center;
-    margin: 10px;
-}
 
-.login-body .login-container .login-left .login-forms .forgot a{
-	text-decoration: none;
-	color: darkgreen;
-	font-weight: bold;
-}
-
-.login-body .login-container .login-right img {
+.register-body .register-container .register-right img {
     width: 450px;
-    height: 100%;
+    height: auto;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-.login-body .login-container .login-left .login-forms label {
+.register-body .register-container .register-left .register-forms label {
     display: block;
     font-size: 16px;
     font-weight: 600;
     padding: 5px;
 }
 
-.login-body .login-container .login-left .login-forms input {
+.register-body .register-container .register-left .register-forms input {
     width: 100%;
     margin: 2px;
     margin-bottom: 20px;
@@ -83,7 +74,7 @@
     border: 1px solid gray;
 }
 
-.login-body .login-container .login-left .login-forms button {
+.register-body .register-container .register-left .register-forms button {
     border: none;
     outline: none;
     padding: 8px;
@@ -93,18 +84,21 @@
     cursor: pointer;
     margin-top: 20px;
     border-radius: 5px;
-    background: #DAE2B6;
 }
 
-.login-body .login-container .login-left .login-forms button:hover {
-    background: #CCD6A6;
+.btn-register {
+    background-color:#00425a !important;
 }
 
-.login-body .login-container .login-right {
+.btn-register:hover {
+    background-color: #E57C23 !important;
+}
+
+.register-body .register-container .register-right {
   position: relative;
 }
 
-.login-body .login-container .login-right::before {
+.register-body .register-container .register-right::before {
   content: "GreenPioneers";
   position: absolute;
   top: 50%;
@@ -115,68 +109,76 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.login-body .login-container .login-left .signup {
+.register-body .register-container .register-left .login {
     text-align: center;
-    margin-top: -30px;
+    margin-bottom: 30px;
+    
 }
 
-.login-body .login-container .login-left .signup a{
+.register-body .register-container .register-left .login a{
     color: green;
     font-weight: bold;
     text-decoration: none;
 }
 
+.register-body .register-container .register-left .login a:hover{
+    color: #00425A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
 @media (max-width: 880px) {
-    .login-body.login-container {
+    .register-body.register-container {
         width: 100%;
         max-width: 750px;
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .login-body .login-container .login-left .login-forms {
+    .register-body .register-container .register-left .register-forms {
         width: 300px;
         margin: 20px auto;
     }
 
-    .login-body .login-container .login-left {
+    .register-body .register-container .register-left {
         width: 400px;
         padding: 20px;
     }
 
-    .login-body .login-container .login-left .login-forms button {
+    .register-body .register-container .register-left .register-forms button {
         width: 100%;
     }
 
-    .login-body .login-container .login-right img {
+    .register-body .register-container .register-right img {
         width: 100%;
         height: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .login-body .login-container {
+    .register-body .register-container {
       max-width: 350px;
       margin: 0 auto;
       border-radius: 0;
       box-shadow: none;
     }
     
-    .login-body .login-container .login-right {
+    .register-body .register-container .register-right {
       display: none;
     }
     
-    .login-body .login-container .login-left {
+    .register-body .register-container .register-left {
       width: 100%;
       padding: 20px;
     }
     
-    .login-body .login-container .login-forms {
+    .register-body .register-container .register-forms {
       width: 100%;
       margin: 20px auto;
     }
     
-    .login-body .login-container .login-left .login-forms input, .login-body .login-container .login-left .login-forms button {
+    .register-body .register-container .register-left .register-forms input, .register-body .register-container .register-left .register-forms button {
       width: 100%;
     }
   }

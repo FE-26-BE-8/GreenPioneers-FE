@@ -58,16 +58,16 @@ const Register = () => {
   };
 
   return (
-    <div className="login-body">
-      <div className="login-container">
-        <div className="login-left">
+    <div className="register-body">
+      <div className="register-container">
+        <div className="register-left">
           <form
             id="register-form"
-            className="login-forms"
+            className="register-forms"
             onSubmit={handleFormSubmit}
           >
-            <h1 className="login-title">Register</h1>
-            <hr className="login-hr" />
+            <h1 className="register-title">Register</h1>
+            <hr className="register-hr" />
             <label htmlFor="username">Username</label>
             <input
               type="text"
@@ -102,13 +102,13 @@ const Register = () => {
               value={confirmpassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
-            <button type="submit">Register</button>
+            <button className="btn-register" type="submit">Register</button>
           </form>
-          <p className="signup">
+          <div className="login">
             Already have an account? <Link to="/login">Login</Link>
-          </p>
+          </div>
         </div>
-        <div className="login-right">
+        <div className="register-right">
           <img src="../src/assets/img/gambar.png" alt="Gambar-Register" />
         </div>
       </div>
