@@ -88,6 +88,21 @@
 }
 
 .btn-nav .btn-register-nav:hover {
-    background-color: #BFDB38 ;
+    background-color: #BFDB38;
     color:#00425A;
+}
+
+.btn-nav .btn-logout-nav {
+    background-color: #FC7300;
+    color: #FFFF ;
+    border: none ;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding:10px 10px;
+    font-weight: 500;
+}
+
+.btn-nav .btn-logout-nav:hover {
+    background-color: red ;
+    color:#FFFF;
 }

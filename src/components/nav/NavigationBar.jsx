@@ -98,7 +98,7 @@ function NavigationBar() {
                     })
                   }
                   variant="outline-success"
-                  className="w-100 btn-register"
+                  className="w-100 btn-logout-nav"
                 >
                   Logout
                 </Button>
