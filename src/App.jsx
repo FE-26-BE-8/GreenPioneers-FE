@@ -3,7 +3,7 @@ import Register from './components/pages/register/Register';
 import News from "./components/pages/news/News";
 import DetailNews from "./components/pages/news/DetailNews";
 import DetailTips from "./components/pages/tips/DetailTips";
-import DetailPrograms from "./components/pages/DetailPrograms"
+import DetailPrograms from "./components/pages/programs/DetailPrograms"
 import Tips from "./components/pages/tips/Tips";
 import Home from "./components/pages/home/Home";
 import Programs from "./components/pages/programs/Programs"
