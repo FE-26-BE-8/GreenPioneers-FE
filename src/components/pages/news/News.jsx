@@ -109,7 +109,6 @@ function News() {
         <div className="news-container container">
           <div className="col-md-7">
             <h1 className="heading">News</h1>
-
             {isLoading ? (
               <Loading />
             ) : newsData ? (

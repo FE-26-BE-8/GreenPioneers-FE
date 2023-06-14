@@ -12,19 +12,17 @@ function DetailNews() {
     fetchData(`https://pear-vast-bream.cyclic.app/api/news/${id}`, "get", null, {
       authorization: "Bearer " + localStorage.getItem("Authorization"),
     }).then((data) => setDetailNews(data.data.data.news));
-  }, [id]);
+  }, []);
 
   return (
     <div className="container">
       {detailNews ? (
-        detailNews.map((detailNew) => (
-          <div className="news" key={detailNew.id}>
-            <h2 className="title">{detailNew.judul}</h2>
-            <img src={detailNew.gambar} alt="Gambar News" />
-            <p>{detailNew.isi}</p>
-          </div>
-        ))
-      ) : (
+        <div className="news" key={detailNews.id}>
+        <h2 className="title">{detailNews.judul}</h2>
+        <img src={detailNews.gambar} alt="Gambar News" />
+        <p>{detailNews.isi}</p>
+      </div>
+        ) : (
         <h1>Data Tidak Ditemukan!</h1>
       )}
     </div>
@@ -32,3 +30,4 @@ function DetailNews() {
 }
 
 export default DetailNews;
+

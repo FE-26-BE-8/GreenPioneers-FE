@@ -2,10 +2,12 @@ import Login from "./components/pages/login/Login"
 import Register from './components/pages/register/Register';
 import News from "./components/pages/news/News";
 import DetailNews from "./components/pages/news/DetailNews";
+import DetailTips from "./components/pages/tips/DetailTips";
 import Tips from "./components/pages/tips/Tips";
 import Home from "./components/pages/home/Home";
 import Programs from "./components/pages/programs/Programs.jsx"
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LinkProgram from "./components/pages/programs/Programs.jsx"
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import ContactForm from "./components/pages/contact/ContactForm";
 
 function App() {
@@ -23,6 +25,10 @@ function App() {
       element: <Tips />,
     },
     {
+      path: "/list-tips/:id",
+      element: <DetailTips />,
+    },
+    {
       path: "/list-news/:id",
       element: <DetailNews />,
     },
@@ -33,6 +39,10 @@ function App() {
     {
       path: "/list-programs",
       element: <Programs />,
+    },
+    {
+      path: "/detail-programs/:id",
+      element: <LinkProgram />,
     },
     {
       path: "/register",

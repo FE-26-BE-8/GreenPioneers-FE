@@ -4,20 +4,26 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading";
+import { useNavigate } from "react-router-dom";
 import "./Tips.css";
 
 function Tips() {
   const { data, fetchData, error } = UseApiCall();
   const [tipsData, setTipsData] = useState(null);
   const [newsData, setNewsData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Tambahkan state isLoading
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+
+  const handleDetailButton = (id) => {
+    navigate(`/list-tips/${id}`);
+  };
 
   useEffect(() => {
     fetchData("https://pear-vast-bream.cyclic.app/api/tips", "get", null, {
       authorization: "Bearer " + localStorage.getItem("Authorization"),
     }).then((data) => {
       setTipsData(data.data.data.tips);
-      setIsLoading(false); // Set isLoading ke false setelah mendapatkan data
+      setIsLoading(false);
     });
   }, []);
 
@@ -90,74 +96,79 @@ function Tips() {
       </Carousel>
 
       {/* //---------------------Tips-------------------------- */}
-      <div className="background-container-2"> 
-      <div className="tips-container container">
-        <div className="col-md-7">
-          <h1 className="heading">Tips</h1>
-          {isLoading ? ( // Tambahkan kondisi isLoading untuk menampilkan Loading
-            <Loading />
-          ) : tipsData ? (
-            tipsData.map((tips) => (
-              <div className="card mb-3 p-4 tips-card" key={tips.id}>
-                <div className="row g-0">
-                  <div className="col-md-6">
-                    <h5 className="card-title">{tips.judul}</h5>
-                    <p className="card-text">
-                    {truncateDescription(tips.isi, 50)}
-                    </p>
-                    <div className="text-center btn-article">
-                      <button className="btn-tips">Baca Selengkapnya</button>
+      <div className="background-container-2">
+        <div className="tips-container container">
+          <div className="col-md-7">
+            <h1 className="heading">Tips</h1>
+            {isLoading ? (
+              <Loading />
+            ) : tipsData ? (
+              tipsData.map((tips) => (
+                <div className="card mb-3 p-4 tips-card" key={tips.id}>
+                  <div className="row g-0">
+                    <div className="col-md-6">
+                      <h5 className="card-title">{tips.judul}</h5>
+                      <p className="card-text">
+                        {truncateDescription(tips.isi, 50)}
+                      </p>
+                      <div className="text-center btn-article">
+                        <button
+                          onClick={() => handleDetailButton(tips.id)}
+                          className="btn-tips"
+                        >
+                          Baca Selengkapnya
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="card-body">
-                      <img
-                        src={tips.gambar}
-                        alt="Gambar Tips"
-                        className="img-fluid img-tips"
-                      />
+                    <div className="col-md-6">
+                      <div className="card-body">
+                        <img
+                          src={tips.gambar}
+                          alt="Gambar Tips"
+                          className="img-fluid img-tips"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <h1>Data Tips Tidak Ditemukan</h1>
-          )}
-        </div>
-
-        {/* //---------------------Trending Topics-------------------------- */}
-        <div className="col-md-4 mt-lg-5 trend-container">
-          <div className="trending-topics">
-            <h2>Trending Topics</h2>
-            {isLoading ? (
-              <Loading /> // Tampilkan Loading jika isLoading true
+              ))
             ) : (
-              <ul>
-                {newsData ? (
-                  newsData.map((topic, index) => (
-                    <li key={index}>
-                      <div className="topic">
-                        <img src={topic.gambar} alt="Trending Topic" />
-                        <div>
-                          <a href="#">{topic.judul}</a>
-                          <p className="card-text">
-                            <small className="text-body-secondary">
-                              {topic.waktu}
-                            </small>
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  ))
-                ) : (
-                  <h1>Data Trending Tidak Ditemukan</h1>
-                )}
-              </ul>
+              <h1>Data Tips Tidak Ditemukan</h1>
             )}
           </div>
+
+          {/* //---------------------Trending Topics-------------------------- */}
+          <div className="col-md-4 mt-lg-5 trend-container">
+            <div className="trending-topics">
+              <h2>Trending Topics</h2>
+              {isLoading ? (
+                <Loading />
+              ) : (
+                <ul>
+                  {newsData ? (
+                    newsData.map((topic, index) => (
+                      <li key={index}>
+                        <div className="topic">
+                          <img src={topic.gambar} alt="Trending Topic" />
+                          <div>
+                            <a href="#">{topic.judul}</a>
+                            <p className="card-text">
+                              <small className="text-body-secondary">
+                                {topic.waktu}
+                              </small>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    ))
+                  ) : (
+                    <h1>Data Trending Tidak Ditemukan</h1>
+                  )}
+                </ul>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
       </div>
       <Footer />
     </>
