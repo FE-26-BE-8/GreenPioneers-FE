@@ -13,7 +13,6 @@ const Login = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    // Validasi input kosong
     if (email.trim() === "") {
       Swal("Error", "Email harus diisi!", "error");
       return;

@@ -15,7 +15,6 @@ const Register = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    // Validasi input kosong
     if (username.trim() === "") {
       Swal("Error", "Username harus diisi!", "error");
       return;

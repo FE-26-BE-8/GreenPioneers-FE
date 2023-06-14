@@ -42,7 +42,6 @@
   width: 100%;
 }
 
-/* Gaya khusus untuk perangkat mobile */
 @media (max-width: 767px) {
   .contact-container {
     padding: 10px;
@@ -62,7 +61,6 @@
   }
 }
 
-/* Gaya khusus untuk perangkat desktop */
 @media (min-width: 768px) {
   .contact-container {
     padding: 30px;
