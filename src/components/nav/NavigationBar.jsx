@@ -44,7 +44,7 @@ function NavigationBar() {
               </div>
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Toggle className="nav-toggle" aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="m-auto my-lg-0 wrapper-navlist"
