@@ -99,6 +99,7 @@ function News() {
       </Carousel>
 
       {/* //---------------------NEWS-------------------------- */}
+      <div className="background-container-2"> 
       <div className="news-container container">
         <div className="col-md-7">
           <h1 className="heading">News</h1>
@@ -165,6 +166,7 @@ function News() {
             )}
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </>
