@@ -132,8 +132,8 @@
   text-align: justify;
 }
 
-.program-events-card .btn-event {
-  padding: 10px 50px;
+ .btn-event {
+  padding: 8px 30px;
   background-color: #04991c;
   border-radius: 15px;
   cursor: pointer;
@@ -147,7 +147,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.program-events-card .btn-event:hover {
+ .btn-event:hover {
   background-color: #00425a;
   border-bottom: 3px solid #00425a;
 }
@@ -168,7 +168,6 @@
 .heading {
   margin-bottom: 25px;
   color: #00253a;
-
   font-size: 50px;
   font-weight: 700;
 }
