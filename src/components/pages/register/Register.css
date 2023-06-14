@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+.register-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../src/assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    max-height: 646px;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-body .register-container .register-left {
+    width: 400px;
+}
+
+.register-body .register-container .register-left .register-forms {
+    width: 250px;
+    margin: 24px auto;
+}
+
+.register-body .register-container .register-left .register-forms .register-title {
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.register-body .register-container .register-left .register-hr {
+    border-top: 2px solid green;
+    margin-bottom: 25px;
+}
+
+
+.register-body .register-container .register-right img {
+    width: 450px;
+    height: auto;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.register-body .register-container .register-left .register-forms label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.register-body .register-container .register-left .register-forms input {
+    width: 100%;
+    margin: 2px;
+    margin-bottom: 20px;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    border-bottom: 3px solid #00425A;
+}
+
+.register-body .register-container .register-left .register-forms button {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btn-register {
+    background-color:#00425a;
+}
+
+.btn-register:hover {
+    background-color: #E57C23;
+}
+
+.register-body .register-container .register-right {
+  position: relative;
+}
+
+.register-body .register-container .register-right::before {
+  content: "GreenPioneers";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 1.5);
+}
+
+.register-body .register-container .register-left .login {
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.register-body .register-container .register-left .login a{
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-body .register-container .register-left .login a:hover{
+    color: #00425A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+@media (max-width: 880px) {
+    .register-body.register-container {
+        width: 100%;
+        max-width: 750px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .register-body .register-container .register-left .register-forms {
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .register-body .register-container .register-left {
+        width: 400px;
+        padding: 20px;
+    }
+
+    .register-body .register-container .register-left .register-forms button {
+        width: 100%;
+    }
+
+    .register-body .register-container .register-right img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-body .register-container {
+      max-width: 350px;
+      margin: 0 auto;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    
+    .register-body .register-container .register-right {
+      display: none;
+    }
+    
+    .register-body .register-container .register-left {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    .register-body .register-container .register-forms {
+      width: 100%;
+      margin: 20px auto;
+    }
+    
+    .register-body .register-container .register-left .register-forms input, .register-body .register-container .register-left .register-forms button {
+      width: 100%;
+    }
+  }
