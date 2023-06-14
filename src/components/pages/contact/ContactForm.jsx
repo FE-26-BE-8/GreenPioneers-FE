@@ -13,8 +13,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h1>Hubungi Kami</h1>
+    <div className="contact-container mt-5">
+      <h1 className="title-contact">Hubungi Kami</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formName">
           <Form.Label>Nama</Form.Label>
