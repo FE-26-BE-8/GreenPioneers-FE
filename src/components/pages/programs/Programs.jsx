@@ -3,16 +3,25 @@ import NavigationBar from "../../nav/NavigationBar";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
+import Loading from "../../loading/Loading";
 import "./Programs.css";
 
 function Programs() {
   const { data, fetchData, error } = UseApiCall();
   const [programs, setPrograms] = useState(null);
+  const [isLoading, setIsLoading] = useState(true); // Tambahkan state isLoading
 
   useEffect(() => {
     fetchData("https://pear-vast-bream.cyclic.app/api/program", "get", null, {
       authorization: "Bearer " + localStorage.getItem("Authorization"),
-    }).then((data) => setPrograms(data.data.data.program));
+    })
+      .then((data) => {
+        setPrograms(data.data.data.program);
+        setIsLoading(false); // Set isLoading ke false setelah mendapatkan data
+      })
+      .catch((error) => {
+        setIsLoading(false); // Set isLoading ke false jika terjadi error
+      });
   }, []);
 
   useEffect(() => {
@@ -92,7 +101,9 @@ function Programs() {
           <h1 className="program-heading">Program Kami</h1>
         </div>
         <div className="center-container">
-          {programs ? (
+        {isLoading ? ( // Tambahkan kondisi isLoading untuk menampilkan Loading
+            <Loading />
+          ) : programs ? (
             programs.map((program) => (
               <div className="program-container" key={program.id}>
                 <div className="img-container">
