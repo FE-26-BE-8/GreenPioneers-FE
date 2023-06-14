@@ -90,6 +90,7 @@ function Tips() {
       </Carousel>
 
       {/* //---------------------Tips-------------------------- */}
+      <div className="background-container-2"> 
       <div className="tips-container container">
         <div className="col-md-7">
           <h1 className="heading">Tips</h1>
@@ -156,6 +157,7 @@ function Tips() {
             )}
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </>
