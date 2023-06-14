@@ -1,18 +1,18 @@
 import React, { useState } from "react";
+import UseApiCall from "../../../helper/UseApiCall";
+import { useParams } from "react-router-dom";
 import "../pages/LinkProgram.css";
 
-function LinkProgram() {
-  const [links, setLinks] = useState([
-    {
-      id: "program-jd2b",
-      judul: "Program Daur Ulang",
-      isi:
-        "Daur ulang adalah salah satu cara yang efektif untuk mengurangi sampah dan mengurangi dampak negatif terhadap lingkungan. Bergabunglah dalam program ini dan mari kita bersama-sama melakukan daur ulang untuk menjaga bumi kita.\n\nMelalui program ini, kami akan memberikan pelatihan dan panduan praktis tentang cara mendaur ulang dengan benar serta memperkenalkan konsep lingkungan yang lebih ramah.",
-      gambar: "https://i.ibb.co/CBk5WNL/program-daur-ulang.jpg",
-      waktu: "Rabu, 07 Juni 2023 09:00 - 12:00 WIB",
-      link: "https://meet.google.com/987654321"
-    },
-  ]);
+function LinkProgram() {  
+  const { id } = useParams();
+  const [links, setLinks] = useState(null)
+  const { fetchData, error } = UseApiCall();
+
+  useEffect(() => {
+    fetchData(`https://pear-vast-bream.cyclic.app/api/program/${id}`, "get", null, {
+      authorization: "Bearer " + localStorage.getItem("Authorization"),
+    }).then((data) => setLinks(data.data.data.program));
+  }, []);
 
   return (
     <>

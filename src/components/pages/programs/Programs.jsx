@@ -4,12 +4,18 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading";
+import { useNavigate } from "react-router-dom";
 import "./Programs.css";
 
 function Programs() {
   const { data, fetchData, error } = UseApiCall();
   const [programs, setPrograms] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Tambahkan state isLoading
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+
+  const handleDetailButton = (id) => {
+    navigate(`/detail-programs/${id}`);
+  };
 
   useEffect(() => {
     fetchData("https://pear-vast-bream.cyclic.app/api/program", "get", null, {
@@ -17,10 +23,10 @@ function Programs() {
     })
       .then((data) => {
         setPrograms(data.data.data.program);
-        setIsLoading(false); // Set isLoading ke false setelah mendapatkan data
+        setIsLoading(false);
       })
       .catch((error) => {
-        setIsLoading(false); // Set isLoading ke false jika terjadi error
+        setIsLoading(false);
       });
   }, []);
 
@@ -89,46 +95,51 @@ function Programs() {
       </Carousel>
 
       {/* //---------------------Programs-------------------------- */}
-      <div className="background-container"> 
-      <div className="ajakan">
-        <h1>
-          Ayo! mari ikut serta dalam program tentang perubahan iklim dan
-          berkontribusi dalam menjaga keberlanjutan bumi kita bersama!
-        </h1>
-      </div>
-      <div className="programs-container">
-        <div className="container">
-          <h1 className="program-heading">Program Kami</h1>
+      <div className="background-container">
+        <div className="ajakan">
+          <h1>
+            Ayo! mari ikut serta dalam program tentang perubahan iklim dan
+            berkontribusi dalam menjaga keberlanjutan bumi kita bersama!
+          </h1>
         </div>
-        <div className="center-container">
-        {isLoading ? ( // Tambahkan kondisi isLoading untuk menampilkan Loading
-            <Loading />
-          ) : programs ? (
-            programs.map((program) => (
-              <div className="program-container" key={program.id}>
-                <div className="img-container">
-                  <img
-                    src={program.gambar}
-                    alt={program.judul}
-                    className="program-image"
-                  />
-                </div>
-                <div className="text-container">
-                  <h2 className="program-title">{program.judul}</h2>
-                  <p className="program-description">
-                    {truncateDescription(program.isi, 12)}
-                  </p>
-                  <div className="button-container">
-                    <button className="btn-event">Ikuti Program</button>
+        <div className="programs-container">
+          <div className="container">
+            <h1 className="program-heading">Program Kami</h1>
+          </div>
+          <div className="center-container">
+            {isLoading ? ( // Tambahkan kondisi isLoading untuk menampilkan Loading
+              <Loading />
+            ) : programs ? (
+              programs.map((program) => (
+                <div className="program-container" key={program.id}>
+                  <div className="img-container">
+                    <img
+                      src={program.gambar}
+                      alt={program.judul}
+                      className="program-image"
+                    />
+                  </div>
+                  <div className="text-container">
+                    <h2 className="program-title">{program.judul}</h2>
+                    <p className="program-description">
+                      {truncateDescription(program.isi, 12)}
+                    </p>
+                    <div className="button-container">
+                      <button
+                        onClick={() => handleDetailButton(program.id)}
+                        className="btn-event"
+                      >
+                        Ikuti Program
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <h1>Data Tidak Ditemukan</h1>
-          )}
+              ))
+            ) : (
+              <h1>Data Tidak Ditemukan</h1>
+            )}
+          </div>
         </div>
-      </div>
       </div>
       <Footer />
     </>
