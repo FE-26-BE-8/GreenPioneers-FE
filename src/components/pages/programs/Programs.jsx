@@ -5,6 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert";
 import "./Programs.css";
 
 function Programs() {
@@ -18,16 +19,24 @@ function Programs() {
   };
 
   useEffect(() => {
-    fetchData("https://pear-vast-bream.cyclic.app/api/program", "get", null, {
-      authorization: "Bearer " + localStorage.getItem("Authorization"),
-    })
-      .then((data) => {
-        setPrograms(data.data.data.program);
-        setIsLoading(false);
+    const userLogin = localStorage.getItem("Authorization");
+    // console.log(userLogin, "=> ini localStorage");
+    if (userLogin) {
+      fetchData("https://pear-vast-bream.cyclic.app/api/news", "get", null, {
+        authorization: "Bearer " + localStorage.getItem("Authorization"),
       })
-      .catch((error) => {
-        setIsLoading(false);
+        .then((data) => {
+          setPrograms(data.data.data.program);
+          setIsLoading(false);
+        })
+        .catch(() => {
+          Swal("Error", "Gagal mengambil data programs", "error");
+        });
+    } else {
+      Swal("Error", "Silahkan Login Terlebih Dahulu", "error").then(() => {
+        navigate("/login");
       });
+    }
   }, []);
 
   useEffect(() => {

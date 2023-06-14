@@ -5,6 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert";
 import "./Tips.css";
 
 function Tips() {
@@ -19,12 +20,24 @@ function Tips() {
   };
 
   useEffect(() => {
-    fetchData("https://pear-vast-bream.cyclic.app/api/tips", "get", null, {
-      authorization: "Bearer " + localStorage.getItem("Authorization"),
-    }).then((data) => {
-      setTipsData(data.data.data.tips);
-      setIsLoading(false);
-    });
+    const userLogin = localStorage.getItem("Authorization");
+    // console.log(userLogin, "=> ini localStorage");
+    if (userLogin) {
+      fetchData("https://pear-vast-bream.cyclic.app/api/tips", "get", null, {
+        authorization: "Bearer " + localStorage.getItem("Authorization"),
+      })
+        .then((data) => {
+          setTipsData(data.data.data.tips);
+          setIsLoading(false);
+        })
+        .catch(() => {
+          Swal("Error", "Gagal mengambil data Tips", "error");
+        });
+    } else {
+      Swal("Error", "Silahkan Login Terlebih Dahulu", "error").then(() => {
+        navigate("/login");
+      });
+    }
   }, []);
 
   useEffect(() => {
@@ -126,6 +139,7 @@ function Tips() {
                           src={tips.gambar}
                           alt="Gambar Tips"
                           className="img-fluid img-tips"
+                          onClick={() => handleDetailButton(tips.id)}
                         />
                       </div>
                     </div>
@@ -149,7 +163,11 @@ function Tips() {
                     newsData.map((topic, index) => (
                       <li key={index}>
                         <div className="topic">
-                          <img src={topic.gambar} alt="Trending Topic" />
+                          <img
+                            src={topic.gambar}
+                            alt="Trending Topic"
+                            onClick={() => handleDetailButton(topic.id)}
+                          />
                           <div>
                             <a href="#">{topic.judul}</a>
                             <p className="card-text">
