@@ -11,6 +11,11 @@ import "./Navbar.css";
 function NavigationBar() {
   const navigate = useNavigate();
   const [isUserLogin, setIsUserLogin] = useState(false);
+  const [activePage, setActivePage] = useState("/");
+
+  useEffect(() => {
+    setActivePage(window.location.pathname);
+  }, [navigate]);
 
   function handleButton(url) {
     navigate(url);
@@ -51,18 +56,46 @@ function NavigationBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Link to="/" className="m-auto nav-list active">
+              <Link
+                to="/"
+                className={`m-auto nav-list ${
+                  activePage === "/" ? "active" : ""
+                }`}
+                onClick={() => setActivePage("/")}
+              >
                 Home
               </Link>
-              <Link to="/list-news" className="m-auto nav-list active">
+
+              <Link
+                to="/list-news"
+                className={`m-auto nav-list ${
+                  activePage === "/list-news" ? "active" : ""
+                }`}
+                onClick={() => setActivePage("/list-news")}
+              >
                 News
               </Link>
-              <Link to="/list-tips" className="m-auto nav-list active">
+
+              <Link
+                to="/list-tips"
+                className={`m-auto nav-list ${
+                  activePage === "/list-tips" ? "active" : ""
+                }`}
+                onClick={() => setActivePage("/list-tips")}
+              >
                 Tips
               </Link>
-              <Link to="/list-programs" className="m-auto nav-list active">
-                Program
+
+              <Link
+                to="/list-programs"
+                className={`m-auto nav-list ${
+                  activePage === "/list-programs" ? "active" : ""
+                }`}
+                onClick={() => setActivePage("/list-programs")}
+              >
+                Programs
               </Link>
+              
             </Nav>
             <div className="d-flex gap-2 btn-nav">
               {!isUserLogin ? (

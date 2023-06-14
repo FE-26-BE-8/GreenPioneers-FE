@@ -55,16 +55,20 @@
     font-weight: 500;
     padding: 20px;
 }
+
 .wrapper-navlist .nav-list:hover{
     color: #FC7300;
 }
 
+.nav-list.active {
+  color: #FC7300;
+  font-weight: bold;
+}
 
 @media only screen and (max-width:676px) {
     .wrapper-navlist .nav-list{
     text-align: center;
     }
-
 }
 
 .btn-nav .btn-login-nav {
@@ -111,3 +115,4 @@
     background-color: red ;
     color:#FFFF;
 }
+
