@@ -139,6 +139,22 @@ form input::placeholder {
     border-bottom: 3px solid #016064;
   }
   
+  .contact-info {
+    margin-top: 30px;
+  }
+  
+  .contact-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  
   @media (max-width: 880px) {
 
     .footer .footer-left,

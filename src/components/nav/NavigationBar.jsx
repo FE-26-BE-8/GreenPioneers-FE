@@ -1,21 +1,26 @@
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert";
+
 import "./Navbar.css";
-import { useEffect, useState } from "react";
 
 function NavigationBar() {
   const navigate = useNavigate();
   const [isUserLogin, setIsUserLogin] = useState(false);
+
   function handleButton(url) {
     navigate(url);
   }
+
   function handleLogout() {
-    localStorage.clear()
-    alert("Berhasil Logout!")
-    navigate("/login")
+    localStorage.clear();
+    Swal("Success", "Berhasil Logout!", "success").then(() => {
+      navigate("/login");
+    });
   }
 
   useEffect(() => {
@@ -79,7 +84,19 @@ function NavigationBar() {
                 </>
               ) : (
                 <Button
-                  onClick={handleLogout}
+                  onClick={() =>
+                    Swal({
+                      title: "Konfirmasi",
+                      text: "Apakah Anda yakin ingin logout?",
+                      icon: "warning",
+                      buttons: ["Batal", "Logout"],
+                      dangerMode: true,
+                    }).then((willLogout) => {
+                      if (willLogout) {
+                        handleLogout();
+                      }
+                    })
+                  }
                   variant="outline-success"
                   className="w-100 btn-register"
                 >

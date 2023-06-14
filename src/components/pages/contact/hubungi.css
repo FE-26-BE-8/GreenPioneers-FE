@@ -1,33 +1,42 @@
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 35px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  .form-divider {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .button-container button {
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.form-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Optional: Add styles for form labels */
+.form-label {
+  font-weight: bold;
+  margin-right: 500px;
+}
+
+/* Optional: Add styles for form inputs */
+.form-control {
+  margin-bottom: 20px;
+}
+
+/* Optional: Add styles for form submit button */
+.btn-primary {
+  width: 100%;
+}

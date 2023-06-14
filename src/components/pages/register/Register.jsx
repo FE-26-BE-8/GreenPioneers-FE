@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./Register.css";
 import UseApiCall from "../../../helper/UseApiCall";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
-  const {data, fetchData, error} = UseApiCall();
+  const { data, fetchData, error } = UseApiCall();
   const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
@@ -16,43 +17,44 @@ const Register = () => {
 
     // Validasi input kosong
     if (username.trim() === "") {
-      alert("Username harus diisi!");
+      Swal("Error", "Username harus diisi!", "error");
       return;
     }
 
     if (email.trim() === "") {
-      alert("Email harus diisi!");
+      Swal("Error", "Email harus diisi!", "error");
       return;
     }
 
     if (password.trim() === "") {
-      alert("Password harus diisi!");
+      Swal("Error", "Password harus diisi!", "error");
       return;
     }
 
     if (confirmpassword.trim() === "") {
-      alert("Confirm Password harus diisi!");
+      Swal("Error", "Confirm Password harus diisi!", "error");
       return;
     }
 
     const userInput = {
-      nama : username,
+      nama: username,
       email,
       password,
-      confPassword : confirmpassword,
-    }
-    console.log(userInput)
-    // alert("Sign up berhasil!");
-    // window.location.href = "article.html";
+      confPassword: confirmpassword,
+    };
 
-    const data = await fetchData("https://pear-vast-bream.cyclic.app/api/register", "post", userInput)
+    const data = await fetchData(
+      "https://pear-vast-bream.cyclic.app/api/register",
+      "post",
+      userInput
+    );
     if (data.status === 201) {
-      alert("Berhasil Register Silahkan Login")
-      navigate("/login")
-    } else if (error){
-      alert("Gagal Register!")
-    } 
-    console.log(data)
+      Swal("Success", "Berhasil Register! Silahkan Login", "success");
+      navigate("/login");
+    } else if (error) {
+      Swal("Error", "Gagal Register!", "error");
+    }
+    console.log(data);
   };
 
   return (

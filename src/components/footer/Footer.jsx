@@ -26,46 +26,20 @@ function Footer() {
         <ul>
         <h3>Tentang Kami</h3>
         <li>
-          <a href="#">FAQ</a>
-        </li>
-        <li>
-          <a href="#">Syarat dan Ketentuan</a>
-        </li>
-        <li>
-          <a href="#">Kebijakan Privasi</a>
-        </li>
-        <li>
           <Link to="/kontak">Kontak Kami</Link>
         </li>
         </ul>
       </div>
 
       <div className="footer-right">
-      <h3>Subscribe</h3>
-        <form action="#">
-          <div className="subscribe-form">
-            <label htmlFor="form-name">Name</label> 
-            <input
-              type="text"
-              name="name"
-              id="form-name"
-              placeholder="Input Name"
-              required
-            />
+      <h3>Contact Us</h3>
+        <div className="contact-info">
+          <p>Jalan Tanjung Priuk, no 801, Jakarta Selatan</p>
+          <p>Khatirul Ihsan</p>
+          <p>+62-9384-2341</p>
+          <p>Senin-Kamis 08.00-17.00</p>
           </div>
-          <div className="subscribe-form">
-            <label htmlFor="form-email">Email</label> 
-            <input
-              type="email"
-              name="email"
-              id="form-email"
-              placeholder="Input Email"
-              required
-            />
-          </div>
-          <button className="btn-submit">Subscribe</button>
-        </form>
-      </div>
+        </div>
     </footer>
   );
 }

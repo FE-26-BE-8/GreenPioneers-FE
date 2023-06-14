@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./Login.css";
 import UseApiCall from "../../../helper/UseApiCall";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {data, fetchData, error} = UseApiCall();
+  const { data, fetchData, error } = UseApiCall();
   const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
@@ -14,29 +15,35 @@ const Login = () => {
 
     // Validasi input kosong
     if (email.trim() === "") {
-      alert("Email harus diisi!");
+      Swal("Error", "Email harus diisi!", "error");
       return;
     }
 
     if (password.trim() === "") {
-      alert("Password harus diisi!");
+      Swal("Error", "Password harus diisi!", "error");
       return;
     }
 
     const userInput = {
       email,
-      password
-    }
-    const data = await fetchData("https://pear-vast-bream.cyclic.app/api/login", "post", userInput)
+      password,
+    };
+
+    const data = await fetchData(
+      "https://pear-vast-bream.cyclic.app/api/login",
+      "post",
+      userInput
+    );
+
     if (data.status === 200) {
-      alert("Berhasil Login")
-      console.log(data.headers['authorization'])
-      localStorage.setItem("Authorization",data.headers['authorization'])
-      navigate("/list-news") 
+      Swal("Success", "Berhasil Login!", "success").then(() => {
+        localStorage.setItem("Authorization", data.headers["authorization"]);
+        navigate("/list-news");
+      });
+    } else {
+      Swal("Error", "Gagal Login!", "error");
     }
   };
-
-
 
   return (
     <div className="login-body">
@@ -63,7 +70,7 @@ const Login = () => {
               type="password"
               id="password"
               placeholder="Password"
-              value={password}  
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="submit">Login</button>
