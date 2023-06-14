@@ -70,14 +70,14 @@ function NavigationBar() {
                   <Button
                     onClick={() => handleButton("/login")}
                     variant="outline-success"
-                    className="w-100 btn-login"
+                    className="w-100 btn-login-nav"
                   >
                     Login
                   </Button>
                   <Button
                     onClick={() => handleButton("/register")}
                     variant="success"
-                    className="w-100 btn-register"
+                    className="w-100 btn-register-nav"
                   >
                     Register
                   </Button>
