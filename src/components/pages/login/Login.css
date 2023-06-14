@@ -32,6 +32,15 @@
     width: 400px;
 }
 
+.login-body .login-container .login-left .btn-back {
+   text-decoration: none;
+   padding: 20px 20px;
+   color: #00425A;
+   font-size: 1.1rem;
+   font-weight: 500;
+}
+
+
 .login-body .login-container .login-left .login-forms {
     width: 250px;
     margin: 60px auto;

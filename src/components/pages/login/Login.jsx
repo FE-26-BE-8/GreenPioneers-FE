@@ -46,44 +46,49 @@ const Login = () => {
 
   return (
     <>
-    <div className="login-body">
-      <div className="login-container">
-        <div className="login-left">
-          <form
-            id="login-form"
-            className="login-forms"
-            onSubmit={handleFormSubmit}
-          >
-            <h1 className="login-title">Login</h1>
-            <hr className="login-hr" />
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button className="btn-login" type="submit">Login</button>
-          </form>
-          <div className="signup">
-            Don't have an account? <Link to="/register">Sign Up</Link>
+      <div className="login-body">
+        <div className="login-container">
+          <div className="login-left">
+            <Link to="/" className="btn-back">
+            ← Kembali
+            </Link>
+            <form
+              id="login-form"
+              className="login-forms"
+              onSubmit={handleFormSubmit}
+            >
+              <h1 className="login-title">Login</h1>
+              <hr className="login-hr" />
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <button className="btn-login" type="submit">
+                Login
+              </button>
+            </form>
+            <div className="signup">
+              Don't have an account? <Link to="/register">Sign Up</Link>
+            </div>
+          </div>
+          <div className="login-right">
+            <img src="../src/assets/img/gambar.png" alt="Gambar-Login" />
           </div>
         </div>
-        <div className="login-right">
-          <img src="../src/assets/img/gambar.png" alt="Gambar-Login" />
-        </div>
       </div>
-    </div>
     </>
   );
 };
