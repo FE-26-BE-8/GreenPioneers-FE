@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import NavigationBar from '../../nav/NavigationBar';
+import Footer from '../../footer/Footer';
 import './hubungi.css';
 
 const ContactForm = () => {
@@ -13,6 +15,10 @@ const ContactForm = () => {
   };
 
   return (
+    <>
+    <NavigationBar />
+    <div className="background-container-2"/>
+    <div className="background-container-2">
     <div className="contact-container mt-5">
       <h1 className="title-contact">Hubungi Kami</h1>
       <Form onSubmit={handleSubmit}>
@@ -66,6 +72,10 @@ const ContactForm = () => {
         </div>
       </Form>
     </div>
+    </div>
+    <div className="background-container-2"/>
+    <Footer />
+    </>
   );
 };
 
