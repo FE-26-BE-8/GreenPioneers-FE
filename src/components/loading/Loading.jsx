@@ -8,7 +8,7 @@ const Loading = () => {
         <div className="loading-spinner"></div>
         </div>
       <div className='loading-text'>
-      <h3>Harap Sabar ini Ujian..</h3>
+      <h3>Sedang Memuat Data Mohon Tunggu Sebentar...</h3>
       </div>
     </div>
   );
