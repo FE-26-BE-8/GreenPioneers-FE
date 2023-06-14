@@ -22,7 +22,7 @@ function Programs() {
     const userLogin = localStorage.getItem("Authorization");
     // console.log(userLogin, "=> ini localStorage");
     if (userLogin) {
-      fetchData("https://pear-vast-bream.cyclic.app/api/news", "get", null, {
+      fetchData("https://pear-vast-bream.cyclic.app/api/program", "get", null, {
         authorization: "Bearer " + localStorage.getItem("Authorization"),
       })
         .then((data) => {

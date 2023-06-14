@@ -33,7 +33,7 @@ function DetailPrograms() {
     <>
     <NavigationBar />
        {/* //---------------------Detail Programs-------------------------- */}
-       <div className="container">
+       <div className="container-detail-programs">
         {isLoading ? (
           <Loading />
         ) : detailPrograms ? (
