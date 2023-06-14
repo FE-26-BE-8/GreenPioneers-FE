@@ -1,12 +1,11 @@
+import Footer from "../../footer/Footer";
+import NavigationBar from "../../nav/NavigationBar";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert";
-
-import NavigationBar from "../../nav/NavigationBar";
 import Loading from "../../loading/Loading";
-import Footer from "../../footer/Footer";
+import Swal from "sweetalert";
 import "./News.css";
 
 function News() {
@@ -21,7 +20,7 @@ function News() {
 
   useEffect(() => {
     const userLogin = localStorage.getItem("Authorization");
-    console.log(userLogin, "=> ini localStorage");
+    // console.log(userLogin, "=> ini localStorage");
     if (userLogin) {
       fetchData("https://pear-vast-bream.cyclic.app/api/news", "get", null, {
         authorization: "Bearer " + localStorage.getItem("Authorization"),
@@ -135,6 +134,7 @@ function News() {
                           src={news.gambar}
                           alt="Kebakaran Hutan"
                           className="img-fluid img-news"
+                          onClick={() => handleDetailButton(news.id)}
                         />
                       </div>
                     </div>
@@ -157,7 +157,11 @@ function News() {
                   {newsData.map((topic, index) => (
                     <li key={index}>
                       <div className="topic">
-                        <img src={topic.gambar} alt="Trending Topic" />
+                        <img
+                          src={topic.gambar}
+                          alt="Trending Topic"
+                          onClick={() => handleDetailButton(topic.id)}
+                        />
                         <div>
                           <a href="#">{topic.judul}</a>
                           <p className="card-text">
