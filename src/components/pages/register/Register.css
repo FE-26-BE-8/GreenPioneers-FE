@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     max-width: 850px;
-    max-height: 650px;
+    max-height: 646px;
     height: 100%;
     background: #fff;
     border-radius: 15px;
@@ -68,10 +68,9 @@
     margin: 2px;
     margin-bottom: 20px;
     border: none;
-    outline: none;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border-bottom: 3px solid #00425A;
 }
 
 .register-body .register-container .register-left .register-forms button {
@@ -87,11 +86,11 @@
 }
 
 .btn-register {
-    background-color:#00425a !important;
+    background-color:#00425a;
 }
 
 .btn-register:hover {
-    background-color: #E57C23 !important;
+    background-color: #E57C23;
 }
 
 .register-body .register-container .register-right {

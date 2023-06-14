@@ -67,10 +67,10 @@
     margin: 2px;
     margin-bottom: 20px;
     border: none;
-    outline: none;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border-bottom: 3px solid #00425A;
+   
 }
 
 .login-body .login-container .login-left .login-forms button {
