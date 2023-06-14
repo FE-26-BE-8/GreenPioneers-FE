@@ -12,7 +12,9 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #00425A;
+    background-image: url("../src/assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .register-container {
@@ -105,7 +107,7 @@
   transform: translate(-50%, -50%);
   font-size: 50px;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 1.5);
 }
 
 .register-body .register-container .register-left .login {
