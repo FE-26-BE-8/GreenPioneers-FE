@@ -42,7 +42,7 @@ function Footer() {
       <h3>Contact Us</h3>
         <div className="contact-info">
           <p>Jalan Tanjung Priuk, no 801, Jakarta Selatan</p>
-          <p>Khatirul Ihsan</p>
+          <p>FE 26 & BE 8 </p>
           <p>+62-9384-2341</p>
           <p>Senin-Kamis 08.00-17.00</p>
           </div>
