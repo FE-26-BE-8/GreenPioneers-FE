@@ -14,6 +14,7 @@ const ContactForm = () => {
     e.preventDefault();
   };
 
+
   return (
     <>
       <NavigationBar />
@@ -65,7 +66,6 @@ const ContactForm = () => {
                       onChange={(e) => setMessage(e.target.value)}
                     />
                   </Form.Group>
-
                   <div className="form-divider"></div>
 
                   <div className="button-container">
