@@ -12,7 +12,7 @@ footer {
     bottom: 0;
 }
 .footer {
-    background-color: rgb(173, 173, 87);
+    background-color: #00253a;
     width: 100%;
     text-align: left;
     padding: 50px 50px 60px 50px;
@@ -39,19 +39,19 @@ footer {
 }
 
 .footer-logo .logo-name1 a {
-    color: #3C6255;
+    color: #1F8A70;
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
 }
 
 .footer-logo .logo-name1 a:hover {
-    color: #61876E;
+    color: #FC7300;
     transition: all .3s ease-in-out;
 }
 
 .footer-logo .logo-name2 a {
-    color: #61876E;
+    color: #BFDB38;
     padding-left: 1px;
     font-weight: 400;
     cursor: pointer;
@@ -61,23 +61,23 @@ footer {
 
 .footer-sub{
     font-weight: bold;
-    color: #335247;
+    color: #1F8A70  ;
 }
 
 .footer-logo .logo-name2 a:hover {
-    color: #3C6255;
+    color: #FC7300;
     transition: all .3s ease-in-out;
 }
 
 .footer-text {
-    color: #3C6255;
+    color: #BFDB38;
     font-size: 14px;
     font-weight: 500;
     margin: 0;
 }
 
 .footer-copyright {
-    color: #3C6255;
+    color: #BFDB38;
     font-size: 14px;
     margin: 0;
     padding-top: 10%;
@@ -96,14 +96,21 @@ h3 {
 }
 
 .footer-center li a { 
-    color: black;
+    color: #BFDB38;
     text-decoration: none;
 
 }
 
+.footer-center li a:hover { 
+    color: #1F8A70;
+    text-decoration: none;
+
+}
+
+
 .footer-right {
     width: 30%;
-    color: #3C6255;
+    color: #BFDB38;
     font-weight: 500;
 }
 
