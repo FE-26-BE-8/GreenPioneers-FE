@@ -17,6 +17,12 @@ function Footer() {
           Dapatkan Informasi Terbaru, Terpercaya dan Terlengkap Terkait
           Lingkungan Hidup
         </p>
+        <br></br>
+        <p className="footer-text">
+          GreenPioneers adalah sebuah website yang bertujuan untuk memberikan 
+          pemahaman tentang masyarakat pentingnga menjaga ekosistem lingkungan 
+          untuk bumi menjadi lebih baik
+        </p>
         <div class="footer-copyright">
                   <p>Copyright &copy; 2023 Green<span>Pioneers</span></p>
       </div>
@@ -26,6 +32,7 @@ function Footer() {
         <ul>
         <h3>Tentang Kami</h3>
         <li>
+          <br></br>
           <Link to="/kontak">Kontak Kami</Link>
         </li>
         </ul>
