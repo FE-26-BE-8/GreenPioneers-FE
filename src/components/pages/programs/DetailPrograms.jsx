@@ -2,7 +2,7 @@ import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
 import React, { useState, useEffect } from "react";
 import UseApiCall from "../../../helper/UseApiCall";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import Loading from "../../loading/Loading";
 import "./DetailPrograms.css";
 
@@ -38,6 +38,9 @@ function DetailPrograms() {
           <Loading />
         ) : detailPrograms ? (
           <div className="programs" key={detailPrograms.id}>
+            <div className="btn-back">
+            <Link to="/list-programs" >← Kembali</Link>
+            </div>
             <div className="main">
               <img src={detailPrograms.gambar} alt="Gambar Programs" />
               <div className="main-kanan">
