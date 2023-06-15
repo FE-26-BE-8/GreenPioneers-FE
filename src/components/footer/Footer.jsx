@@ -30,7 +30,7 @@ function Footer() {
 
       <div className="footer-center">
         <ul>
-        <h3>Tentang Kami</h3>
+        <h3 className="footer-sub">Tentang Kami</h3>
         <li>
           <br></br>
           <Link to="/kontak">Kontak Kami</Link>
@@ -39,7 +39,7 @@ function Footer() {
       </div>
 
       <div className="footer-right">
-      <h3>Contact Us</h3>
+      <h3 className="footer-sub">Contact Us</h3>
         <div className="contact-info">
           <p>Jalan Tanjung Priuk, no 801, Jakarta Selatan</p>
           <p>FE 26 & BE 8 </p>
