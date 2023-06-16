@@ -85,7 +85,7 @@ const Login = () => {
             </div>
           </div>
           <div className="login-right">
-            <img src="../src/assets/img/gambar.png" alt="Gambar-Login" />
+            <img src="https://i.ibb.co/rkvcZ52/gambar.png" alt="Gambar-Login" />
           </div>
         </div>
       </div>
