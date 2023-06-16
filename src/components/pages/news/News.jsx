@@ -59,7 +59,7 @@ function News() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/News-Carosel-1.jpg"
+            src="https://i.ibb.co/mNZdGrM/News-Carosel-1.jpg"
             alt="First slide"
           />
           <div className="wrapper-title-carousel">
@@ -75,7 +75,7 @@ function News() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/News-Carosel-2.jpg"
+            src="https://i.ibb.co/Nm7SFV7/News-Carosel-2.jpg"
             alt="Second slide"
           />
           <div className="wrapper-title-carousel">
@@ -91,7 +91,7 @@ function News() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/News-Carosel-3.jpg"
+            src="https://i.ibb.co/kD08vqX/News-Carosel-3.jpg"
             alt="Third slide"
           />
           <div className="wrapper-title-carousel">
