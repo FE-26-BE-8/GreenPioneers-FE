@@ -59,7 +59,7 @@ function Programs() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/Programs-Carosel-1.jpg"
+            src="https://i.ibb.co/h2FPcZP/Programs-Carosel-1.jpg"
             alt="First slide"
           />
           <div className="wrapper-title-carousel">
@@ -72,7 +72,7 @@ function Programs() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/Programs-Carosel-2.jpg"
+            src="https://i.ibb.co/LpHh658/Programs-Carosel-2.jpg"
             alt="Second slide"
           />
           <div className="wrapper-title-carousel">
@@ -88,7 +88,7 @@ function Programs() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/Programs-Carosel-3.jpg"
+            src="https://i.ibb.co/bsXXmv0/Programs-Carosel-3.jpg"
             alt="Third slide"
           />
           <div className="wrapper-title-carousel">

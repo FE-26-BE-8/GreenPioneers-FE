@@ -110,7 +110,7 @@ const Register = () => {
           </div>
         </div>
         <div className="register-right">
-          <img src="../src/assets/img/gambar.png" alt="Gambar-Register" />
+          <img src="https://i.ibb.co/rkvcZ52/gambar.png" alt="Gambar-Register" />
         </div>
       </div>
     </div>
