@@ -175,7 +175,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/Home-Carosel-1.jpg"
+            src="https://i.ibb.co/XjSMs4Q/Home-Carosel-1.jpg"
             alt="First slide"
           />
           <div className="wrapper-title-carousel">
@@ -188,7 +188,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/Home-Carosel-2.jpg"
+            src="https://i.ibb.co/Jzn9L80/Home-Carosel-2.jpg"
             alt="Second slide"
           />
           <div className="wrapper-title-carousel">
@@ -201,7 +201,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="../src/assets/Carosel/Home-Carosel-3.jpg"
+            src="https://i.ibb.co/wzcgfzC/Home-Carosel-3.jpg"
             alt="Third slide"
           />
           <div className="wrapper-title-carousel">
