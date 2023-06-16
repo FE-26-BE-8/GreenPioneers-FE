@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container-link-programs {
+  width: 1140px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.link-container {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.link-title {
+  margin: 50px 0 20px 0;
+  font-size: 40px;
+}
+
+.urlLink {
+  margin: 20px 0 40px 0;
+  font-size: 45px;
+  text-align: center;
+}
+
+.program-title {
+  margin: 20px 0 20px 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.tanggal-platform {
+  display: flex;
+}
+
+.tanggal {
+  margin-right: 40px;
+}
+
+.tanggal-isi {
+  max-width: 150px;
+}
+
+.tanggal-title,
+.platform-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .link-title {
+    margin: 30px 0 10px 0;
+    font-size: 30px;
+  }
+
+  .urlLink {
+    margin: 10px 0 20px 0;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .program-title {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+  }
+
+  .tanggal-platform {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tanggal-title, .platform-title{
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .tanggal {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+}
+
+/* Responsiveness */
+@media screen and (max-width: 468px) {
+  .container {
+    padding: 5px;
+  }
+
+  .link-title {
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+  }
+
+  .urlLink {
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .program-title {
+    margin: 10px 0 30px 0;
+    font-size: 16px;
+  }
+
+  .tanggal-platform {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tanggal-title, .platform-title{
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .tanggal {
+    margin-right: 0;
+    margin-bottom: 15px;
+    /* flex: 0 0 100%; */
+    /* max-width: none; */
+  }
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container-detail-programs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.programs {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.programs img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.btnProgram {
+  background-color: rgb(3, 212, 3);
+  padding: 10px;
+  font-weight: 700;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(121, 121, 121);
+  cursor: pointer;
+}
+
+.btnProgram:hover {
+  background-color: rgb(3, 151, 3);
+}
+
+.programs p {
+  text-align: justify;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .main{
+    flex-direction: column;
+  }
+
+  .programs {
+    padding: 10px;
+  }
+
+  .programs img {
+    margin-bottom: 20px;
+  }
+
+  .btnProgram{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .programs {
+    padding: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .programs img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .btnProgram{
+    margin-bottom: 20px;
+  }
+}

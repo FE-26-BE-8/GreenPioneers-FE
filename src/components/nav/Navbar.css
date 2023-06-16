@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #00425A;
+}
+
+.nav-toggle{
+    background-color: #1F8A70 !important;
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.6em;
+    padding: 5px;
+}
+
+.logo-name1 a {
+    color: #1F8A70;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo-name1 a:hover {
+    color: #FC7300;
+    transition: all .3s ease-in-out;
+}
+
+.logo-name2 a {
+    color: #BFDB38;
+    padding-left: 1px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.logo-name2 a:hover {
+    color: #FC7300;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper-navlist .nav-list{
+    color: #BFDB38;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.wrapper-navlist .nav-list:hover{
+    color: #FC7300;
+}
+
+.nav-list.active {
+  color: #FC7300;
+  font-weight: bold;
+}
+
+@media only screen and (max-width:676px) {
+    .wrapper-navlist .nav-list{
+    text-align: center;
+    }
+}
+
+.btn-nav .btn-login-nav {
+    padding: 10px 10px;
+    font-size: 1rem;
+    color: #FFFF;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.btn-nav .btn-login-nav:hover {
+    background-color: #00425A;
+    color: #BFDB38;
+}
+
+.btn-nav .btn-register-nav {
+    background-color: #FC7300;
+    color: #FFFF ;
+    border: none ;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding:10px 10px;
+    font-weight: 500;
+}
+
+.btn-nav .btn-register-nav:hover {
+    background-color: #BFDB38;
+    color:#00425A;
+}
+
+.btn-nav .btn-logout-nav {
+    background-color: #FC7300;
+    color: #FFFF ;
+    border: none ;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding:10px 10px;
+    font-weight: 500;
+}
+
+.btn-nav .btn-logout-nav:hover {
+    background-color: r ed ;
+    color:#FFFF;
+}
+
