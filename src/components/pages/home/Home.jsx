@@ -225,7 +225,7 @@ function Home() {
                   <h3>{event.judul}</h3>
                 </div>
                 <div className="detail-events">
-                  <p>{truncateDescription(event.isi, 20)}</p>
+                  <p>{truncateDescription(event.isi, 25)}</p>
                 </div>
                 <button className="btn-event">Selengkapnya</button>
               </div>
