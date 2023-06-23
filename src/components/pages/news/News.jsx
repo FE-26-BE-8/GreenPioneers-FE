@@ -1,16 +1,17 @@
 import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../loading/Loading";
 import Swal from "sweetalert";
+import { NewsContext } from "../../../context/NewsProvider";
 import "./News.css";
 
 function News() {
   const { data, fetchData, error } = UseApiCall();
-  const [newsData, setNewsData] = useState(null);
+  const {newsData, setNewsData} = useContext(NewsContext);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 

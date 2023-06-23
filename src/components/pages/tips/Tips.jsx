@@ -1,16 +1,17 @@
 import Footer from "../../footer/Footer";
 import NavigationBar from "../../nav/NavigationBar";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import UseApiCall from "../../../helper/UseApiCall";
 import Loading from "../../loading/Loading";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert";
+import { TipsContext } from "../../../context/TipsProvider";
 import "./Tips.css";
 
 function Tips() {
   const { data, fetchData, error } = UseApiCall();
-  const [tipsData, setTipsData] = useState(null);
+  const {tipsData, setTipsData} = useContext(TipsContext);
   const [newsData, setNewsData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
