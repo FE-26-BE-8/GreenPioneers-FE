@@ -43,7 +43,7 @@ function DetailNews() {
             </div>
             <h2 className="title">{detailNews.judul}</h2>
             <img src={detailNews.gambar} alt="Gambar News" />
-            <textarea>{detailNews.isi}</textarea>
+            <p>{detailNews.isi}</p>
           </div>
         ) : (
           <h1>Data Tidak Ditemukan!</h1>
